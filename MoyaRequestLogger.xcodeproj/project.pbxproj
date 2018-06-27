@@ -10,9 +10,6 @@
 		B8DCA6C8AE07FE4CEBE7A91C /* RequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA649636F930A113349B4 /* RequestDescriptor.swift */; };
 		B8DCA78917B044A2CB48EF83 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA87158B201A6219E2566 /* Mocks.swift */; };
 		B8DCABC686C3208138574A48 /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* LoggerProtocol.swift */; };
-		D437032020E3880A00855FC1 /* MoyaRequestLogger_MacOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D437031E20E3880A00855FC1 /* MoyaRequestLogger_MacOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D437032D20E3884200855FC1 /* MoyaRequestLogger_WatchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D437032B20E3884200855FC1 /* MoyaRequestLogger_WatchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D437033A20E3886000855FC1 /* MoyaRequestLogger_TvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D437033820E3886000855FC1 /* MoyaRequestLogger_TvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D437033E20E3889B00855FC1 /* MoyaPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048320DBDABE00F1276A /* MoyaPlugin.swift */; };
 		D437033F20E3889B00855FC1 /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* LoggerProtocol.swift */; };
 		D437034020E3889B00855FC1 /* RequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA649636F930A113349B4 /* RequestDescriptor.swift */; };
@@ -23,7 +20,7 @@
 		D437034520E3889D00855FC1 /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* LoggerProtocol.swift */; };
 		D437034620E3889D00855FC1 /* RequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA649636F930A113349B4 /* RequestDescriptor.swift */; };
 		D455047120DBDA7D00F1276A /* MoyaRequestLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D455046720DBDA7C00F1276A /* MoyaRequestLogger.framework */; };
-		D455047820DBDA7D00F1276A /* MoyaRequestLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = D455046A20DBDA7D00F1276A /* MoyaRequestLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D455047820DBDA7D00F1276A /* MoyaRequestLogger_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D455046A20DBDA7D00F1276A /* MoyaRequestLogger_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D455048420DBDABF00F1276A /* MoyaPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048320DBDABE00F1276A /* MoyaPlugin.swift */; };
 		D455048B20DBDACC00F1276A /* MoyaRequestLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048820DBDACC00F1276A /* MoyaRequestLoggerTests.swift */; };
 		D4FE0ED320E393DB0022B1F1 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB5E20E393C20022B1F1 /* Moya.framework */; };
@@ -59,16 +56,16 @@
 		B8DCA87158B201A6219E2566 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		D437031C20E3880A00855FC1 /* MoyaRequestLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoyaRequestLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D437031E20E3880A00855FC1 /* MoyaRequestLogger_MacOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoyaRequestLogger_MacOS.h; sourceTree = "<group>"; };
-		D437031F20E3880A00855FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D437031F20E3880A00855FC1 /* Info_MacOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_MacOS.plist; sourceTree = "<group>"; };
 		D437032920E3884200855FC1 /* MoyaRequestLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoyaRequestLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D437032B20E3884200855FC1 /* MoyaRequestLogger_WatchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoyaRequestLogger_WatchOS.h; sourceTree = "<group>"; };
-		D437032C20E3884200855FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D437032C20E3884200855FC1 /* Info_WatchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_WatchOS.plist; sourceTree = "<group>"; };
 		D437033620E3886000855FC1 /* MoyaRequestLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoyaRequestLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D437033820E3886000855FC1 /* MoyaRequestLogger_TvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoyaRequestLogger_TvOS.h; sourceTree = "<group>"; };
-		D437033920E3886000855FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D437033920E3886000855FC1 /* Info_TvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_TvOS.plist; sourceTree = "<group>"; };
 		D455046720DBDA7C00F1276A /* MoyaRequestLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoyaRequestLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D455046A20DBDA7D00F1276A /* MoyaRequestLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoyaRequestLogger.h; sourceTree = "<group>"; };
-		D455046B20DBDA7D00F1276A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D455046A20DBDA7D00F1276A /* MoyaRequestLogger_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoyaRequestLogger_iOS.h; sourceTree = "<group>"; };
+		D455046B20DBDA7D00F1276A /* Info_iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_iOS.plist; sourceTree = "<group>"; };
 		D455047020DBDA7D00F1276A /* MoyaRequestLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoyaRequestLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D455047720DBDA7D00F1276A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D455048320DBDABE00F1276A /* MoyaPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaPlugin.swift; sourceTree = "<group>"; };
@@ -142,51 +139,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D437031D20E3880A00855FC1 /* MoyaRequestLogger-MacOS */ = {
-			isa = PBXGroup;
-			children = (
-				D437031E20E3880A00855FC1 /* MoyaRequestLogger_MacOS.h */,
-				D437031F20E3880A00855FC1 /* Info.plist */,
-			);
-			path = "MoyaRequestLogger-MacOS";
-			sourceTree = "<group>";
-		};
-		D437032A20E3884200855FC1 /* MoyaRequestLogger-WatchOS */ = {
-			isa = PBXGroup;
-			children = (
-				D437032B20E3884200855FC1 /* MoyaRequestLogger_WatchOS.h */,
-				D437032C20E3884200855FC1 /* Info.plist */,
-			);
-			path = "MoyaRequestLogger-WatchOS";
-			sourceTree = "<group>";
-		};
-		D437033720E3886000855FC1 /* MoyaRequestLogger-TvOS */ = {
-			isa = PBXGroup;
-			children = (
-				D437033820E3886000855FC1 /* MoyaRequestLogger_TvOS.h */,
-				D437033920E3886000855FC1 /* Info.plist */,
-			);
-			path = "MoyaRequestLogger-TvOS";
-			sourceTree = "<group>";
-		};
-		D437034720E388C100855FC1 /* MoyaRequestLogger-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D455046A20DBDA7D00F1276A /* MoyaRequestLogger.h */,
-				D455046B20DBDA7D00F1276A /* Info.plist */,
-			);
-			path = "MoyaRequestLogger-iOS";
-			sourceTree = "<group>";
-		};
 		D455045D20DBDA7C00F1276A = {
 			isa = PBXGroup;
 			children = (
 				D455048120DBDABE00F1276A /* Sources */,
 				D455048520DBDACC00F1276A /* Tests */,
-				D437034720E388C100855FC1 /* MoyaRequestLogger-iOS */,
-				D437031D20E3880A00855FC1 /* MoyaRequestLogger-MacOS */,
-				D437032A20E3884200855FC1 /* MoyaRequestLogger-WatchOS */,
-				D437033720E3886000855FC1 /* MoyaRequestLogger-TvOS */,
 				D455046820DBDA7C00F1276A /* Products */,
 				D4FEE79A20E393AA0022B1F1 /* Carthage */,
 			);
@@ -207,6 +164,14 @@
 		D455048120DBDABE00F1276A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D455046B20DBDA7D00F1276A /* Info_iOS.plist */,
+				D437031F20E3880A00855FC1 /* Info_MacOS.plist */,
+				D437032C20E3884200855FC1 /* Info_WatchOS.plist */,
+				D437033920E3886000855FC1 /* Info_TvOS.plist */,
+				D455046A20DBDA7D00F1276A /* MoyaRequestLogger_iOS.h */,
+				D437031E20E3880A00855FC1 /* MoyaRequestLogger_MacOS.h */,
+				D437032B20E3884200855FC1 /* MoyaRequestLogger_WatchOS.h */,
+				D437033820E3886000855FC1 /* MoyaRequestLogger_TvOS.h */,
 				D4FE0F1620E39DA80022B1F1 /* MoyaRequestLogger */,
 			);
 			path = Sources;
@@ -306,7 +271,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D437032020E3880A00855FC1 /* MoyaRequestLogger_MacOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +278,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D437032D20E3884200855FC1 /* MoyaRequestLogger_WatchOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +285,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D437033A20E3886000855FC1 /* MoyaRequestLogger_TvOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +292,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D455047820DBDA7D00F1276A /* MoyaRequestLogger.h in Headers */,
+				D455047820DBDA7D00F1276A /* MoyaRequestLogger_iOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,7 +552,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "MoyaRequestLogger-MacOS/Info.plist";
+				INFOPLIST_FILE = Sources/Info_MacOS.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -620,7 +582,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "MoyaRequestLogger-MacOS/Info.plist";
+				INFOPLIST_FILE = Sources/Info_MacOS.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -649,7 +611,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
-				INFOPLIST_FILE = "MoyaRequestLogger-WatchOS/Info.plist";
+				INFOPLIST_FILE = Sources/Info_WatchOS.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -679,7 +641,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
-				INFOPLIST_FILE = "MoyaRequestLogger-WatchOS/Info.plist";
+				INFOPLIST_FILE = Sources/Info_WatchOS.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -708,7 +670,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = "MoyaRequestLogger-TvOS/Info.plist";
+				INFOPLIST_FILE = Sources/Info_TvOS.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -737,7 +699,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = "MoyaRequestLogger-TvOS/Info.plist";
+				INFOPLIST_FILE = Sources/Info_TvOS.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -888,7 +850,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "MoyaRequestLogger-iOS/Info.plist";
+				INFOPLIST_FILE = Sources/Info_iOS.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -917,7 +879,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "MoyaRequestLogger-iOS/Info.plist";
+				INFOPLIST_FILE = Sources/Info_iOS.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
