@@ -25,7 +25,7 @@ platform :ios do
       command: "build",
       platform: "all",
       cache_builds: true,
-      no_skip_current: false,
+      no_skip_current: true,
     )
 
     scan(
