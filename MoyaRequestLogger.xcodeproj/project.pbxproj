@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8DCA6C8AE07FE4CEBE7A91C /* RequestDescriptior.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA649636F930A113349B4 /* RequestDescriptior.swift */; };
+		B8DCA78917B044A2CB48EF83 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA87158B201A6219E2566 /* Mocks.swift */; };
 		B8DCABC686C3208138574A48 /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* LoggerProtocol.swift */; };
 		D455047120DBDA7D00F1276A /* MoyaRequestLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D455046720DBDA7C00F1276A /* MoyaRequestLogger.framework */; };
 		D455047820DBDA7D00F1276A /* MoyaRequestLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = D455046A20DBDA7D00F1276A /* MoyaRequestLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,7 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B8DCA649636F930A113349B4 /* RequestDescriptior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDescriptior.swift; sourceTree = "<group>"; };
 		B8DCA81A93657481721A301F /* LoggerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerProtocol.swift; sourceTree = "<group>"; };
+		B8DCA87158B201A6219E2566 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		D455046720DBDA7C00F1276A /* MoyaRequestLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoyaRequestLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D455046A20DBDA7D00F1276A /* MoyaRequestLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoyaRequestLogger.h; sourceTree = "<group>"; };
 		D455046B20DBDA7D00F1276A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			children = (
 				D455048320DBDABE00F1276A /* MoyaPlugin.swift */,
 				B8DCA81A93657481721A301F /* LoggerProtocol.swift */,
+				B8DCA649636F930A113349B4 /* RequestDescriptior.swift */,
 			);
 			path = MoyaRequestLogger;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				D455048820DBDACC00F1276A /* MoyaRequestLoggerTests.swift */,
+				B8DCA87158B201A6219E2566 /* Mocks.swift */,
 			);
 			path = MoyaRequestLoggerTests;
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 			files = (
 				D455048420DBDABF00F1276A /* MoyaPlugin.swift in Sources */,
 				B8DCABC686C3208138574A48 /* LoggerProtocol.swift in Sources */,
+				B8DCA6C8AE07FE4CEBE7A91C /* RequestDescriptior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D455048B20DBDACC00F1276A /* MoyaRequestLoggerTests.swift in Sources */,
+				B8DCA78917B044A2CB48EF83 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
