@@ -7,17 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8DCA6C8AE07FE4CEBE7A91C /* RequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA649636F930A113349B4 /* RequestDescriptor.swift */; };
+		B8DCA78917B044A2CB48EF83 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA87158B201A6219E2566 /* Mocks.swift */; };
 		B8DCABC686C3208138574A48 /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* LoggerProtocol.swift */; };
+		D437033E20E3889B00855FC1 /* MoyaPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048320DBDABE00F1276A /* MoyaPlugin.swift */; };
+		D437033F20E3889B00855FC1 /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* LoggerProtocol.swift */; };
+		D437034020E3889B00855FC1 /* RequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA649636F930A113349B4 /* RequestDescriptor.swift */; };
+		D437034120E3889C00855FC1 /* MoyaPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048320DBDABE00F1276A /* MoyaPlugin.swift */; };
+		D437034220E3889C00855FC1 /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* LoggerProtocol.swift */; };
+		D437034320E3889C00855FC1 /* RequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA649636F930A113349B4 /* RequestDescriptor.swift */; };
+		D437034420E3889D00855FC1 /* MoyaPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048320DBDABE00F1276A /* MoyaPlugin.swift */; };
+		D437034520E3889D00855FC1 /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* LoggerProtocol.swift */; };
+		D437034620E3889D00855FC1 /* RequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA649636F930A113349B4 /* RequestDescriptor.swift */; };
 		D455047120DBDA7D00F1276A /* MoyaRequestLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D455046720DBDA7C00F1276A /* MoyaRequestLogger.framework */; };
-		D455047820DBDA7D00F1276A /* MoyaRequestLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = D455046A20DBDA7D00F1276A /* MoyaRequestLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D455047820DBDA7D00F1276A /* MoyaRequestLogger_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D455046A20DBDA7D00F1276A /* MoyaRequestLogger_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D455048420DBDABF00F1276A /* MoyaPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048320DBDABE00F1276A /* MoyaPlugin.swift */; };
 		D455048B20DBDACC00F1276A /* MoyaRequestLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048820DBDACC00F1276A /* MoyaRequestLoggerTests.swift */; };
-		D455048F20DBDE5900F1276A /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D455048D20DBDE5900F1276A /* Moya.framework */; };
-		D455049020DBDE5900F1276A /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D455048D20DBDE5900F1276A /* Moya.framework */; };
-		D455049120DBDE5900F1276A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D455048E20DBDE5900F1276A /* Result.framework */; };
-		D455049220DBDE5900F1276A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D455048E20DBDE5900F1276A /* Result.framework */; };
-		D455049420DBE0AC00F1276A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D455049320DBE0AC00F1276A /* Alamofire.framework */; };
-		D455049520DBE0AC00F1276A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D455049320DBE0AC00F1276A /* Alamofire.framework */; };
+		D4FE0ED320E393DB0022B1F1 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB5E20E393C20022B1F1 /* Moya.framework */; };
+		D4FE0ED620E393DB0022B1F1 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB6120E393C20022B1F1 /* Result.framework */; };
+		D4FE0EE020E393DB0022B1F1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB6B20E393C20022B1F1 /* Alamofire.framework */; };
+		D4FE0F0720E3951B0022B1F1 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB1420E393C20022B1F1 /* Moya.framework */; };
+		D4FE0F0820E3951B0022B1F1 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB1720E393C20022B1F1 /* Result.framework */; };
+		D4FE0F0920E3951B0022B1F1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB2620E393C20022B1F1 /* Alamofire.framework */; };
+		D4FE0F0D20E3953E0022B1F1 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB3620E393C20022B1F1 /* Moya.framework */; };
+		D4FE0F0E20E3953E0022B1F1 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB3B20E393C20022B1F1 /* Result.framework */; };
+		D4FE0F0F20E3953E0022B1F1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB5020E393C20022B1F1 /* Alamofire.framework */; };
+		D4FE0F1020E3953F0022B1F1 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB3620E393C20022B1F1 /* Moya.framework */; };
+		D4FE0F1120E3953F0022B1F1 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB3B20E393C20022B1F1 /* Result.framework */; };
+		D4FE0F1220E3953F0022B1F1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB5020E393C20022B1F1 /* Alamofire.framework */; };
+		D4FE0F1320E395620022B1F1 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB7620E393C20022B1F1 /* Moya.framework */; };
+		D4FE0F1420E395620022B1F1 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB7920E393C20022B1F1 /* Result.framework */; };
+		D4FE0F1520E395620022B1F1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB8A20E393C20022B1F1 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,27 +51,77 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B8DCA649636F930A113349B4 /* RequestDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDescriptor.swift; sourceTree = "<group>"; };
 		B8DCA81A93657481721A301F /* LoggerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerProtocol.swift; sourceTree = "<group>"; };
+		B8DCA87158B201A6219E2566 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		D437031C20E3880A00855FC1 /* MoyaRequestLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoyaRequestLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D437031E20E3880A00855FC1 /* MoyaRequestLogger_MacOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoyaRequestLogger_MacOS.h; sourceTree = "<group>"; };
+		D437031F20E3880A00855FC1 /* Info_MacOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_MacOS.plist; sourceTree = "<group>"; };
+		D437032920E3884200855FC1 /* MoyaRequestLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoyaRequestLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D437032B20E3884200855FC1 /* MoyaRequestLogger_WatchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoyaRequestLogger_WatchOS.h; sourceTree = "<group>"; };
+		D437032C20E3884200855FC1 /* Info_WatchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_WatchOS.plist; sourceTree = "<group>"; };
+		D437033620E3886000855FC1 /* MoyaRequestLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoyaRequestLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D437033820E3886000855FC1 /* MoyaRequestLogger_TvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoyaRequestLogger_TvOS.h; sourceTree = "<group>"; };
+		D437033920E3886000855FC1 /* Info_TvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_TvOS.plist; sourceTree = "<group>"; };
 		D455046720DBDA7C00F1276A /* MoyaRequestLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoyaRequestLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D455046A20DBDA7D00F1276A /* MoyaRequestLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoyaRequestLogger.h; sourceTree = "<group>"; };
-		D455046B20DBDA7D00F1276A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D455046A20DBDA7D00F1276A /* MoyaRequestLogger_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoyaRequestLogger_iOS.h; sourceTree = "<group>"; };
+		D455046B20DBDA7D00F1276A /* Info_iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_iOS.plist; sourceTree = "<group>"; };
 		D455047020DBDA7D00F1276A /* MoyaRequestLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoyaRequestLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D455047720DBDA7D00F1276A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D455048320DBDABE00F1276A /* MoyaPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaPlugin.swift; sourceTree = "<group>"; };
 		D455048820DBDACC00F1276A /* MoyaRequestLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaRequestLoggerTests.swift; sourceTree = "<group>"; };
-		D455048D20DBDE5900F1276A /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
-		D455048E20DBDE5900F1276A /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		D455049320DBE0AC00F1276A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		D4FEFB1420E393C20022B1F1 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya.framework; sourceTree = "<group>"; };
+		D4FEFB1720E393C20022B1F1 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
+		D4FEFB2620E393C20022B1F1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		D4FEFB3620E393C20022B1F1 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya.framework; sourceTree = "<group>"; };
+		D4FEFB3B20E393C20022B1F1 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
+		D4FEFB5020E393C20022B1F1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		D4FEFB5E20E393C20022B1F1 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya.framework; sourceTree = "<group>"; };
+		D4FEFB6120E393C20022B1F1 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
+		D4FEFB6B20E393C20022B1F1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		D4FEFB7620E393C20022B1F1 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya.framework; sourceTree = "<group>"; };
+		D4FEFB7920E393C20022B1F1 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
+		D4FEFB8A20E393C20022B1F1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D437031820E3880A00855FC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FE0ED620E393DB0022B1F1 /* Result.framework in Frameworks */,
+				D4FE0ED320E393DB0022B1F1 /* Moya.framework in Frameworks */,
+				D4FE0EE020E393DB0022B1F1 /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D437032520E3884200855FC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FE0F0720E3951B0022B1F1 /* Moya.framework in Frameworks */,
+				D4FE0F0920E3951B0022B1F1 /* Alamofire.framework in Frameworks */,
+				D4FE0F0820E3951B0022B1F1 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D437033220E3886000855FC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FE0F1320E395620022B1F1 /* Moya.framework in Frameworks */,
+				D4FE0F1520E395620022B1F1 /* Alamofire.framework in Frameworks */,
+				D4FE0F1420E395620022B1F1 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D455046320DBDA7C00F1276A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D455048F20DBDE5900F1276A /* Moya.framework in Frameworks */,
-				D455049420DBE0AC00F1276A /* Alamofire.framework in Frameworks */,
-				D455049120DBDE5900F1276A /* Result.framework in Frameworks */,
+				D4FE0F0D20E3953E0022B1F1 /* Moya.framework in Frameworks */,
+				D4FE0F0F20E3953E0022B1F1 /* Alamofire.framework in Frameworks */,
+				D4FE0F0E20E3953E0022B1F1 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,10 +129,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D455049220DBDE5900F1276A /* Result.framework in Frameworks */,
-				D455049020DBDE5900F1276A /* Moya.framework in Frameworks */,
+				D4FE0F1120E3953F0022B1F1 /* Result.framework in Frameworks */,
+				D4FE0F1020E3953F0022B1F1 /* Moya.framework in Frameworks */,
 				D455047120DBDA7D00F1276A /* MoyaRequestLogger.framework in Frameworks */,
-				D455049520DBE0AC00F1276A /* Alamofire.framework in Frameworks */,
+				D4FE0F1220E3953F0022B1F1 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +142,10 @@
 		D455045D20DBDA7C00F1276A = {
 			isa = PBXGroup;
 			children = (
-				D455049320DBE0AC00F1276A /* Alamofire.framework */,
-				D455048D20DBDE5900F1276A /* Moya.framework */,
-				D455048E20DBDE5900F1276A /* Result.framework */,
 				D455048120DBDABE00F1276A /* Sources */,
 				D455048520DBDACC00F1276A /* Tests */,
 				D455046820DBDA7C00F1276A /* Products */,
+				D4FEE79A20E393AA0022B1F1 /* Carthage */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +154,9 @@
 			children = (
 				D455046720DBDA7C00F1276A /* MoyaRequestLogger.framework */,
 				D455047020DBDA7D00F1276A /* MoyaRequestLoggerTests.xctest */,
+				D437031C20E3880A00855FC1 /* MoyaRequestLogger.framework */,
+				D437032920E3884200855FC1 /* MoyaRequestLogger.framework */,
+				D437033620E3886000855FC1 /* MoyaRequestLogger.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,20 +164,17 @@
 		D455048120DBDABE00F1276A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				D455046A20DBDA7D00F1276A /* MoyaRequestLogger.h */,
-				D455046B20DBDA7D00F1276A /* Info.plist */,
-				D455048220DBDABE00F1276A /* MoyaRequestLogger */,
+				D455046B20DBDA7D00F1276A /* Info_iOS.plist */,
+				D437031F20E3880A00855FC1 /* Info_MacOS.plist */,
+				D437032C20E3884200855FC1 /* Info_WatchOS.plist */,
+				D437033920E3886000855FC1 /* Info_TvOS.plist */,
+				D455046A20DBDA7D00F1276A /* MoyaRequestLogger_iOS.h */,
+				D437031E20E3880A00855FC1 /* MoyaRequestLogger_MacOS.h */,
+				D437032B20E3884200855FC1 /* MoyaRequestLogger_WatchOS.h */,
+				D437033820E3886000855FC1 /* MoyaRequestLogger_TvOS.h */,
+				D4FE0F1620E39DA80022B1F1 /* MoyaRequestLogger */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		D455048220DBDABE00F1276A /* MoyaRequestLogger */ = {
-			isa = PBXGroup;
-			children = (
-				D455048320DBDABE00F1276A /* MoyaPlugin.swift */,
-				B8DCA81A93657481721A301F /* LoggerProtocol.swift */,
-			);
-			path = MoyaRequestLogger;
 			sourceTree = "<group>";
 		};
 		D455048520DBDACC00F1276A /* Tests */ = {
@@ -122,27 +190,172 @@
 			isa = PBXGroup;
 			children = (
 				D455048820DBDACC00F1276A /* MoyaRequestLoggerTests.swift */,
+				B8DCA87158B201A6219E2566 /* Mocks.swift */,
 			);
 			path = MoyaRequestLoggerTests;
+			sourceTree = "<group>";
+		};
+		D4FE0F1620E39DA80022B1F1 /* MoyaRequestLogger */ = {
+			isa = PBXGroup;
+			children = (
+				D455048320DBDABE00F1276A /* MoyaPlugin.swift */,
+				B8DCA81A93657481721A301F /* LoggerProtocol.swift */,
+				B8DCA649636F930A113349B4 /* RequestDescriptor.swift */,
+			);
+			path = MoyaRequestLogger;
+			sourceTree = "<group>";
+		};
+		D4FEE79A20E393AA0022B1F1 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				D4FEFB0F20E393C20022B1F1 /* Build */,
+			);
+			path = Carthage;
+			sourceTree = "<group>";
+		};
+		D4FEFB0F20E393C20022B1F1 /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				D4FEFB1220E393C20022B1F1 /* watchOS */,
+				D4FEFB3220E393C20022B1F1 /* iOS */,
+				D4FEFB5D20E393C20022B1F1 /* Mac */,
+				D4FEFB7320E393C20022B1F1 /* tvOS */,
+			);
+			path = Build;
+			sourceTree = "<group>";
+		};
+		D4FEFB1220E393C20022B1F1 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				D4FEFB1420E393C20022B1F1 /* Moya.framework */,
+				D4FEFB1720E393C20022B1F1 /* Result.framework */,
+				D4FEFB2620E393C20022B1F1 /* Alamofire.framework */,
+			);
+			path = watchOS;
+			sourceTree = "<group>";
+		};
+		D4FEFB3220E393C20022B1F1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D4FEFB3620E393C20022B1F1 /* Moya.framework */,
+				D4FEFB3B20E393C20022B1F1 /* Result.framework */,
+				D4FEFB5020E393C20022B1F1 /* Alamofire.framework */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		D4FEFB5D20E393C20022B1F1 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				D4FEFB5E20E393C20022B1F1 /* Moya.framework */,
+				D4FEFB6120E393C20022B1F1 /* Result.framework */,
+				D4FEFB6B20E393C20022B1F1 /* Alamofire.framework */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		D4FEFB7320E393C20022B1F1 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				D4FEFB7620E393C20022B1F1 /* Moya.framework */,
+				D4FEFB7920E393C20022B1F1 /* Result.framework */,
+				D4FEFB8A20E393C20022B1F1 /* Alamofire.framework */,
+			);
+			path = tvOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		D437031920E3880A00855FC1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D437032620E3884200855FC1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D437033320E3886000855FC1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D455046420DBDA7C00F1276A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D455047820DBDA7D00F1276A /* MoyaRequestLogger.h in Headers */,
+				D455047820DBDA7D00F1276A /* MoyaRequestLogger_iOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D455046620DBDA7C00F1276A /* MoyaRequestLogger */ = {
+		D437031B20E3880A00855FC1 /* MoyaRequestLogger-MacOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D455047B20DBDA7D00F1276A /* Build configuration list for PBXNativeTarget "MoyaRequestLogger" */;
+			buildConfigurationList = D437032120E3880A00855FC1 /* Build configuration list for PBXNativeTarget "MoyaRequestLogger-MacOS" */;
+			buildPhases = (
+				D437031720E3880A00855FC1 /* Sources */,
+				D437031820E3880A00855FC1 /* Frameworks */,
+				D437031920E3880A00855FC1 /* Headers */,
+				D437031A20E3880A00855FC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MoyaRequestLogger-MacOS";
+			productName = "10 - carthage build --no-skip-current --no-use-binaries --cache-builds MoyaRequestLogger-MacOS";
+			productReference = D437031C20E3880A00855FC1 /* MoyaRequestLogger.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D437032820E3884200855FC1 /* MoyaRequestLogger-WatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D437032E20E3884200855FC1 /* Build configuration list for PBXNativeTarget "MoyaRequestLogger-WatchOS" */;
+			buildPhases = (
+				D437032420E3884200855FC1 /* Sources */,
+				D437032520E3884200855FC1 /* Frameworks */,
+				D437032620E3884200855FC1 /* Headers */,
+				D437032720E3884200855FC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MoyaRequestLogger-WatchOS";
+			productName = "MoyaRequestLogger-WatchOS";
+			productReference = D437032920E3884200855FC1 /* MoyaRequestLogger.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D437033520E3886000855FC1 /* MoyaRequestLogger-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D437033B20E3886000855FC1 /* Build configuration list for PBXNativeTarget "MoyaRequestLogger-tvOS" */;
+			buildPhases = (
+				D437033120E3886000855FC1 /* Sources */,
+				D437033220E3886000855FC1 /* Frameworks */,
+				D437033320E3886000855FC1 /* Headers */,
+				D437033420E3886000855FC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MoyaRequestLogger-tvOS";
+			productName = "MoyaRequestLogger-TvOS";
+			productReference = D437033620E3886000855FC1 /* MoyaRequestLogger.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D455046620DBDA7C00F1276A /* MoyaRequestLogger-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D455047B20DBDA7D00F1276A /* Build configuration list for PBXNativeTarget "MoyaRequestLogger-iOS" */;
 			buildPhases = (
 				D455046220DBDA7C00F1276A /* Sources */,
 				D455046320DBDA7C00F1276A /* Frameworks */,
@@ -153,7 +366,7 @@
 			);
 			dependencies = (
 			);
-			name = MoyaRequestLogger;
+			name = "MoyaRequestLogger-iOS";
 			productName = MoyaRequestLogger;
 			productReference = D455046720DBDA7C00F1276A /* MoyaRequestLogger.framework */;
 			productType = "com.apple.product-type.framework";
@@ -186,6 +399,15 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Alpha Troya";
 				TargetAttributes = {
+					D437031B20E3880A00855FC1 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					D437032820E3884200855FC1 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					D437033520E3886000855FC1 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					D455046620DBDA7C00F1276A = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -200,19 +422,44 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = D455045D20DBDA7C00F1276A;
 			productRefGroup = D455046820DBDA7C00F1276A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D455046620DBDA7C00F1276A /* MoyaRequestLogger */,
+				D437031B20E3880A00855FC1 /* MoyaRequestLogger-MacOS */,
+				D455046620DBDA7C00F1276A /* MoyaRequestLogger-iOS */,
+				D437032820E3884200855FC1 /* MoyaRequestLogger-WatchOS */,
+				D437033520E3886000855FC1 /* MoyaRequestLogger-tvOS */,
 				D455046F20DBDA7D00F1276A /* MoyaRequestLoggerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D437031A20E3880A00855FC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D437032720E3884200855FC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D437033420E3886000855FC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D455046520DBDA7C00F1276A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,12 +477,43 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D437031720E3880A00855FC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D437033E20E3889B00855FC1 /* MoyaPlugin.swift in Sources */,
+				D437033F20E3889B00855FC1 /* LoggerProtocol.swift in Sources */,
+				D437034020E3889B00855FC1 /* RequestDescriptor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D437032420E3884200855FC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D437034120E3889C00855FC1 /* MoyaPlugin.swift in Sources */,
+				D437034220E3889C00855FC1 /* LoggerProtocol.swift in Sources */,
+				D437034320E3889C00855FC1 /* RequestDescriptor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D437033120E3886000855FC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D437034420E3889D00855FC1 /* MoyaPlugin.swift in Sources */,
+				D437034520E3889D00855FC1 /* LoggerProtocol.swift in Sources */,
+				D437034620E3889D00855FC1 /* RequestDescriptor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D455046220DBDA7C00F1276A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D455048420DBDABF00F1276A /* MoyaPlugin.swift in Sources */,
 				B8DCABC686C3208138574A48 /* LoggerProtocol.swift in Sources */,
+				B8DCA6C8AE07FE4CEBE7A91C /* RequestDescriptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D455048B20DBDACC00F1276A /* MoyaRequestLoggerTests.swift in Sources */,
+				B8DCA78917B044A2CB48EF83 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,12 +531,190 @@
 /* Begin PBXTargetDependency section */
 		D455047320DBDA7D00F1276A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D455046620DBDA7C00F1276A /* MoyaRequestLogger */;
+			target = D455046620DBDA7C00F1276A /* MoyaRequestLogger-iOS */;
 			targetProxy = D455047220DBDA7D00F1276A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		D437032220E3880A00855FC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Sources/Info_MacOS.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.alphatroya.MoyaRequestLogger;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		D437032320E3880A00855FC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Sources/Info_MacOS.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.alphatroya.MoyaRequestLogger;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		D437032F20E3884200855FC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = Sources/Info_WatchOS.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.alphatroya.MoyaRequestLogger.MoyaRequestLogger-WatchOS";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		D437033020E3884200855FC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = Sources/Info_WatchOS.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.alphatroya.MoyaRequestLogger.MoyaRequestLogger-WatchOS";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		D437033C20E3886000855FC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = Sources/Info_TvOS.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.alphatroya.MoyaRequestLogger.MoyaRequestLogger-TvOS";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		D437033D20E3886000855FC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = Sources/Info_TvOS.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.alphatroya.MoyaRequestLogger.MoyaRequestLogger-TvOS";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 		D455047920DBDA7D00F1276A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -313,6 +770,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = MoyaRequestLogger;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -369,6 +827,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MoyaRequestLogger;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -391,15 +850,16 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Sources/Info_iOS.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alphatroya.MoyaRequestLogger;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -419,15 +879,16 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Sources/Info_iOS.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alphatroya.MoyaRequestLogger;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -439,6 +900,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -448,6 +910,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alphatroya.MoyaRequestLoggerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -461,6 +924,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -470,6 +934,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alphatroya.MoyaRequestLoggerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -481,6 +946,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D437032120E3880A00855FC1 /* Build configuration list for PBXNativeTarget "MoyaRequestLogger-MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D437032220E3880A00855FC1 /* Debug */,
+				D437032320E3880A00855FC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D437032E20E3884200855FC1 /* Build configuration list for PBXNativeTarget "MoyaRequestLogger-WatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D437032F20E3884200855FC1 /* Debug */,
+				D437033020E3884200855FC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D437033B20E3886000855FC1 /* Build configuration list for PBXNativeTarget "MoyaRequestLogger-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D437033C20E3886000855FC1 /* Debug */,
+				D437033D20E3886000855FC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D455046120DBDA7C00F1276A /* Build configuration list for PBXProject "MoyaRequestLogger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -490,7 +982,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D455047B20DBDA7D00F1276A /* Build configuration list for PBXNativeTarget "MoyaRequestLogger" */ = {
+		D455047B20DBDA7D00F1276A /* Build configuration list for PBXNativeTarget "MoyaRequestLogger-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D455047C20DBDA7D00F1276A /* Debug */,
