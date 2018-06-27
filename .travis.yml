@@ -9,6 +9,7 @@ script:
 - bundle install
 - bundle exec fastlane test
 - bash <(curl -s https://codecov.io/bash)
+- carthage build --no-skip-current --cache-builds
 before_deploy:
 - carthage checkout
 - carthage build --no-skip-current --no-use-binaries
