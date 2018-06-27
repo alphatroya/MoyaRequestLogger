@@ -21,13 +21,6 @@ platform :ios do
       cache_builds: true,
     )
 
-    # carthage(
-    #   command: "build",
-    #   platform: "all",
-    #   cache_builds: true,
-    #   no_skip_current: true,
-    # )
-
     scan(
       project: 'MoyaRequestLogger.xcodeproj',
       scheme: 'MoyaRequestLogger-iOS',
