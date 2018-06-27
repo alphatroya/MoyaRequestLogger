@@ -4,7 +4,7 @@ xcode_sdk: iphoneos11.0
 cache:
   bundler: true
   directories:
-    - Carthage
+    - Carthage/Build
 script:
 - bundle install
 - bundle exec fastlane test
