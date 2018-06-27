@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D455046620DBDA7C00F1276A"
+               BlueprintIdentifier = "D437031B20E3880A00855FC1"
                BuildableName = "MoyaRequestLogger.framework"
-               BlueprintName = "MoyaRequestLogger"
+               BlueprintName = "MoyaRequestLogger-MacOS"
                ReferencedContainer = "container:MoyaRequestLogger.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,28 +26,10 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D455046F20DBDA7D00F1276A"
-               BuildableName = "MoyaRequestLoggerTests.xctest"
-               BlueprintName = "MoyaRequestLoggerTests"
-               ReferencedContainer = "container:MoyaRequestLogger.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D455046620DBDA7C00F1276A"
-            BuildableName = "MoyaRequestLogger.framework"
-            BlueprintName = "MoyaRequestLogger"
-            ReferencedContainer = "container:MoyaRequestLogger.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +46,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D455046620DBDA7C00F1276A"
+            BlueprintIdentifier = "D437031B20E3880A00855FC1"
             BuildableName = "MoyaRequestLogger.framework"
-            BlueprintName = "MoyaRequestLogger"
+            BlueprintName = "MoyaRequestLogger-MacOS"
             ReferencedContainer = "container:MoyaRequestLogger.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D455046620DBDA7C00F1276A"
+            BlueprintIdentifier = "D437031B20E3880A00855FC1"
             BuildableName = "MoyaRequestLogger.framework"
-            BlueprintName = "MoyaRequestLogger"
+            BlueprintName = "MoyaRequestLogger-MacOS"
             ReferencedContainer = "container:MoyaRequestLogger.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

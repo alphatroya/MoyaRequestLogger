@@ -9,14 +9,21 @@ import enum Result.Result
 
 public final class ResponseLoggerPlugin: PluginType {
     private let logger: LoggerProtocol
+    private let descriptors: [RequestDescriptor]
 
-    public init(logger: LoggerProtocol) {
+    public init(
+        logger: LoggerProtocol,
+        descriptors: RequestDescriptor...
+    ) {
         self.logger = logger
+        self.descriptors = descriptors
     }
 
     public func willSend(_ request: RequestType, target: TargetType) {
         self.logger.log(with: .info, "start new request: \(target.path)")
-        self.logger.log(with: .verbose, "\(target.httpie(request: request, logger: self.logger))")
+        for exporter in descriptors {
+            self.logger.log(with: .verbose, exporter.description(request: request, target: target, logger: self.logger))
+        }
     }
 
     public func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
