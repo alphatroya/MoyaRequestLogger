@@ -1,0 +1,38 @@
+#!usr/bin/ruby
+
+fastlane_version '2.0'
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+    ENV['FASTLANE_XCODE_LIST_TIMEOUT'] = '120'
+  end
+
+  desc 'Run tests'
+  lane :test do
+    spm(
+      command: "test"
+    )
+
+    carthage(
+      use_binaries: false,
+      platform: "all",
+      cache_builds: true,
+    )
+
+    carthage(
+      command: "build",
+      platform: "all",
+      cache_builds: true,
+      no_skip_current: false,
+    )
+
+    scan(
+      project: 'MoyaRequestLogger.xcodeproj',
+      scheme: 'MoyaRequestLogger-iOS',
+      clean: true,
+      code_coverage: true
+    )
+  end
+end

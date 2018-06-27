@@ -1,0 +1,20 @@
+language: objective-c
+osx_image: xcode9.4
+xcode_sdk: iphoneos11.0
+cache: bundler
+script:
+- bundle install
+- bundle exec fastlane test
+- bash <(curl -s https://codecov.io/bash)
+before_deploy:
+- carthage checkout
+- carthage build --no-skip-current --no-use-binaries
+- carthage archive MoyaRequestLogger
+deploy:
+  provider: releases
+  api_key:
+    secure: dmxVwNZMn1+CDcviK/G2P43E+5zQAGDss6YZFiic7bkNyQklRWG0TJajkfxCXmuy6hqn0MqaeWlgkhtaP/hdXVmcc9q5Ef3UFZZIB0FeCY5YcX9VM53hW7bKfQ3e2o5+MhMIn/o7310zMaHHn1eWRXTors8f9OR7E7l3oJLi5WUdUsE8Kf7WiHRZojUVMPJyzJlDnah8+8wkzcfcmG+PP+lIZ74vKyEm6ZUmd7c2CveZHamzed/6Aqn8mOM3O4D0E6JwQFHVNIaHIfz4AtZu6aokfKJeznCBJ3xzZHNN/kSKaoZ5iTe+ykmZaeoF1zbnedmyb0VggyDCXS52Gxy4AjASJmbfhDotwgS1yU3MDrXx0pc2swY4zoYtHC3ucbMdaNnw8in22G3Qfe15lw6DIcRPg/uBmrrkIw1ejyTiJW0Kkx/fGNGCnb5S5HJI4ber804hHz1bqp+ywRtNFaaCtcQfRS/Getdd6Nlat18tP/shexLbmZDTC35L+lkWq1qee8mKZUrx6fJ1ntZy8o1bJO+QIxhuRMleMXq2DggTVLo65oih76hVJjNXllBMdBHLqbF0LNNoXF7iQdimo07ysq1OYf54Hvnw8j6KNqoux1bUFb1xjyDmh/mUs2GId0soYqRDSbpn6izzmI+wjIzoPVlqVb7KVLeMZYvcKcmRfEM=
+  file: MoyaRequestLogger.framework.zip
+  skip_cleanup: true
+  on:
+    tags: true
