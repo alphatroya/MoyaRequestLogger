@@ -13,18 +13,24 @@ public protocol LoggerProtocol {
     func log(with level: LoggerLevel, _ message: String)
 }
 
+public typealias PlainLoggerClosure = ((String) -> Void)
+
 public final class PlainLogger {
+    let logClosure: PlainLoggerClosure
+    public init(logClosure: @escaping PlainLoggerClosure = { print($0) }) {
+        self.logClosure = logClosure
+    }
 }
 
 extension PlainLogger: LoggerProtocol {
     public func log(with level: LoggerLevel, _ message: String) {
         switch level {
         case .info:
-            print("[NETWORK_INFO] " + message)
+            logClosure("[NETWORK_INFO] " + message)
         case .verbose:
-            print("[NETWORK_VERBOSE] " + message)
+            logClosure("[NETWORK_VERBOSE] " + message)
         case .warning:
-            print("[NETWORK_WARNING] " + message)
+            logClosure("[NETWORK_WARNING] " + message)
         }
     }
 }

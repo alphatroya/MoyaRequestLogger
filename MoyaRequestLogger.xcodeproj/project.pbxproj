@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8DCA4A18A047937B03B3884 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA7A6D7D81E0A8332D193 /* MockRequest.swift */; };
 		B8DCA6C8AE07FE4CEBE7A91C /* RequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA649636F930A113349B4 /* RequestDescriptor.swift */; };
-		B8DCA78917B044A2CB48EF83 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA87158B201A6219E2566 /* Mocks.swift */; };
+		B8DCA838F80C9355A5C94E17 /* MockRequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA78213AEF0B7AD8E3315 /* MockRequestDescriptor.swift */; };
+		B8DCAB603ABEED28BF03ED0D /* MockLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA79DBA86F177F192DFD9 /* MockLogger.swift */; };
 		B8DCABC686C3208138574A48 /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* LoggerProtocol.swift */; };
-		D437033E20E3889B00855FC1 /* MoyaPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048320DBDABE00F1276A /* MoyaPlugin.swift */; };
+		B8DCAEA0ED47C619E8510F41 /* PlainLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCAF748D1CB1B40BB3C746 /* PlainLoggerTests.swift */; };
+		B8DCAF574B26F1B2ADC9715E /* MockTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA12967AE5C6D1483880B /* MockTarget.swift */; };
+		D437033E20E3889B00855FC1 /* ResponseLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048320DBDABE00F1276A /* ResponseLoggerPlugin.swift */; };
 		D437033F20E3889B00855FC1 /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* LoggerProtocol.swift */; };
 		D437034020E3889B00855FC1 /* RequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA649636F930A113349B4 /* RequestDescriptor.swift */; };
-		D437034120E3889C00855FC1 /* MoyaPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048320DBDABE00F1276A /* MoyaPlugin.swift */; };
+		D437034120E3889C00855FC1 /* ResponseLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048320DBDABE00F1276A /* ResponseLoggerPlugin.swift */; };
 		D437034220E3889C00855FC1 /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* LoggerProtocol.swift */; };
 		D437034320E3889C00855FC1 /* RequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA649636F930A113349B4 /* RequestDescriptor.swift */; };
-		D437034420E3889D00855FC1 /* MoyaPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048320DBDABE00F1276A /* MoyaPlugin.swift */; };
+		D437034420E3889D00855FC1 /* ResponseLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048320DBDABE00F1276A /* ResponseLoggerPlugin.swift */; };
 		D437034520E3889D00855FC1 /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* LoggerProtocol.swift */; };
 		D437034620E3889D00855FC1 /* RequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA649636F930A113349B4 /* RequestDescriptor.swift */; };
 		D455047120DBDA7D00F1276A /* MoyaRequestLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D455046720DBDA7C00F1276A /* MoyaRequestLogger.framework */; };
 		D455047820DBDA7D00F1276A /* MoyaRequestLogger_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D455046A20DBDA7D00F1276A /* MoyaRequestLogger_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D455048420DBDABF00F1276A /* MoyaPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048320DBDABE00F1276A /* MoyaPlugin.swift */; };
+		D455048420DBDABF00F1276A /* ResponseLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048320DBDABE00F1276A /* ResponseLoggerPlugin.swift */; };
 		D455048B20DBDACC00F1276A /* MoyaRequestLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048820DBDACC00F1276A /* MoyaRequestLoggerTests.swift */; };
 		D4FE0ED320E393DB0022B1F1 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB5E20E393C20022B1F1 /* Moya.framework */; };
 		D4FE0ED620E393DB0022B1F1 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FEFB6120E393C20022B1F1 /* Result.framework */; };
@@ -51,9 +55,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B8DCA12967AE5C6D1483880B /* MockTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTarget.swift; sourceTree = "<group>"; };
 		B8DCA649636F930A113349B4 /* RequestDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDescriptor.swift; sourceTree = "<group>"; };
+		B8DCA78213AEF0B7AD8E3315 /* MockRequestDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRequestDescriptor.swift; sourceTree = "<group>"; };
+		B8DCA79DBA86F177F192DFD9 /* MockLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLogger.swift; sourceTree = "<group>"; };
+		B8DCA7A6D7D81E0A8332D193 /* MockRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRequest.swift; sourceTree = "<group>"; };
 		B8DCA81A93657481721A301F /* LoggerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerProtocol.swift; sourceTree = "<group>"; };
-		B8DCA87158B201A6219E2566 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		B8DCAF748D1CB1B40BB3C746 /* PlainLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlainLoggerTests.swift; sourceTree = "<group>"; };
 		D437031C20E3880A00855FC1 /* MoyaRequestLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoyaRequestLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D437031E20E3880A00855FC1 /* MoyaRequestLogger_MacOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoyaRequestLogger_MacOS.h; sourceTree = "<group>"; };
 		D437031F20E3880A00855FC1 /* Info_MacOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_MacOS.plist; sourceTree = "<group>"; };
@@ -68,7 +76,7 @@
 		D455046B20DBDA7D00F1276A /* Info_iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_iOS.plist; sourceTree = "<group>"; };
 		D455047020DBDA7D00F1276A /* MoyaRequestLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoyaRequestLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D455047720DBDA7D00F1276A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D455048320DBDABE00F1276A /* MoyaPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaPlugin.swift; sourceTree = "<group>"; };
+		D455048320DBDABE00F1276A /* ResponseLoggerPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseLoggerPlugin.swift; sourceTree = "<group>"; };
 		D455048820DBDACC00F1276A /* MoyaRequestLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaRequestLoggerTests.swift; sourceTree = "<group>"; };
 		D4FEFB1420E393C20022B1F1 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya.framework; sourceTree = "<group>"; };
 		D4FEFB1720E393C20022B1F1 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
@@ -139,6 +147,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8DCA3F3661580810BE45D66 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCA79DBA86F177F192DFD9 /* MockLogger.swift */,
+				B8DCA7A6D7D81E0A8332D193 /* MockRequest.swift */,
+				B8DCA78213AEF0B7AD8E3315 /* MockRequestDescriptor.swift */,
+				B8DCA12967AE5C6D1483880B /* MockTarget.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		D455045D20DBDA7C00F1276A = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				D455048820DBDACC00F1276A /* MoyaRequestLoggerTests.swift */,
-				B8DCA87158B201A6219E2566 /* Mocks.swift */,
+				B8DCAF748D1CB1B40BB3C746 /* PlainLoggerTests.swift */,
+				B8DCA3F3661580810BE45D66 /* Mocks */,
 			);
 			path = MoyaRequestLoggerTests;
 			sourceTree = "<group>";
@@ -198,7 +218,7 @@
 		D4FE0F1620E39DA80022B1F1 /* MoyaRequestLogger */ = {
 			isa = PBXGroup;
 			children = (
-				D455048320DBDABE00F1276A /* MoyaPlugin.swift */,
+				D455048320DBDABE00F1276A /* ResponseLoggerPlugin.swift */,
 				B8DCA81A93657481721A301F /* LoggerProtocol.swift */,
 				B8DCA649636F930A113349B4 /* RequestDescriptor.swift */,
 			);
@@ -481,7 +501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D437033E20E3889B00855FC1 /* MoyaPlugin.swift in Sources */,
+				D437033E20E3889B00855FC1 /* ResponseLoggerPlugin.swift in Sources */,
 				D437033F20E3889B00855FC1 /* LoggerProtocol.swift in Sources */,
 				D437034020E3889B00855FC1 /* RequestDescriptor.swift in Sources */,
 			);
@@ -491,7 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D437034120E3889C00855FC1 /* MoyaPlugin.swift in Sources */,
+				D437034120E3889C00855FC1 /* ResponseLoggerPlugin.swift in Sources */,
 				D437034220E3889C00855FC1 /* LoggerProtocol.swift in Sources */,
 				D437034320E3889C00855FC1 /* RequestDescriptor.swift in Sources */,
 			);
@@ -501,7 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D437034420E3889D00855FC1 /* MoyaPlugin.swift in Sources */,
+				D437034420E3889D00855FC1 /* ResponseLoggerPlugin.swift in Sources */,
 				D437034520E3889D00855FC1 /* LoggerProtocol.swift in Sources */,
 				D437034620E3889D00855FC1 /* RequestDescriptor.swift in Sources */,
 			);
@@ -511,7 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D455048420DBDABF00F1276A /* MoyaPlugin.swift in Sources */,
+				D455048420DBDABF00F1276A /* ResponseLoggerPlugin.swift in Sources */,
 				B8DCABC686C3208138574A48 /* LoggerProtocol.swift in Sources */,
 				B8DCA6C8AE07FE4CEBE7A91C /* RequestDescriptor.swift in Sources */,
 			);
@@ -522,7 +542,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D455048B20DBDACC00F1276A /* MoyaRequestLoggerTests.swift in Sources */,
-				B8DCA78917B044A2CB48EF83 /* Mocks.swift in Sources */,
+				B8DCAEA0ED47C619E8510F41 /* PlainLoggerTests.swift in Sources */,
+				B8DCAB603ABEED28BF03ED0D /* MockLogger.swift in Sources */,
+				B8DCA4A18A047937B03B3884 /* MockRequest.swift in Sources */,
+				B8DCA838F80C9355A5C94E17 /* MockRequestDescriptor.swift in Sources */,
+				B8DCAF574B26F1B2ADC9715E /* MockTarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
