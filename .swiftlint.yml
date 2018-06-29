@@ -1,8 +1,10 @@
 excluded:
   - Carthage
+  - .build
 
 disabled_rules:
   - trailing_comma
+  - closure_end_indentation
 
 opt_in_rules:
   - array_init
@@ -45,6 +47,10 @@ opt_in_rules:
   - unneeded_parentheses_in_closure_argument
   - vertical_parameter_alignment_on_call
   - yoda_condition
+  - fallthrough
+  - empty_xctest_method
+  - file_name
+  - convenience_type
 
 line_length: 140
 identifier_name:
