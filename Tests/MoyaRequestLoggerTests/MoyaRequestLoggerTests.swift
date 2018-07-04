@@ -70,6 +70,19 @@ final class ResponseLoggerPluginTests: XCTestCase {
         XCTAssertEqual(logger.levels[4], .verbose)
     }
 
+    func testRequestDidReceiveFailureResponseLogging() {
+        // GIVEN
+        let error = MoyaError.requestMapping("")
+        let target = MockTarget()
+        // WHEN
+        plugin.didReceive(.failure(error), target: target)
+        // THEN
+        XCTAssertEqual(logger.messages[1], " Request target: \(target)")
+        XCTAssertEqual(logger.levels[1], .warning)
+        XCTAssertEqual(logger.messages[2], " Response error \(error)")
+        XCTAssertEqual(logger.levels[2], .warning)
+    }
+
     static var allTests = [
         ("testExample", testRequestWillSendInfoMessage),
     ]
