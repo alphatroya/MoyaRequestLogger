@@ -14,7 +14,9 @@ struct MockTarget: TargetType {
     var sampleData: Data
     var task: Task
     var headers: [String: String]?
+}
 
+extension MockTarget {
     init() {
         // swiftlint:disable:next force_unwrapping
         baseURL = URL(string: "www.google.com")!
