@@ -25,7 +25,7 @@ private extension TargetType {
         ]
 
         if let headers = request.request?.allHTTPHeaderFields {
-            fragments.append(contentsOf: headers.map { "\($0.key):'\($0.value)'" })
+            fragments.append(contentsOf: headers.sorted { $0.key < $1.key }.map { "\($0.key):'\($0.value)'" })
         }
 
         switch task {
