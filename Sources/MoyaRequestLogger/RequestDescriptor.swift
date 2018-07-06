@@ -36,7 +36,7 @@ private extension TargetType {
             case _ as URLEncoding:
                 parameters.map { "\($0.key)==\($0.value)" }.forEach { fragments.append($0) }
             case _ as JSONEncoding:
-                fragments.insert("echo '\(prettyPrinted(json: parameters))' | ", at: 0)
+                fragments.insert("echo '\(prettyPrinted(json: parameters))' |", at: 0)
             default:
                 break
             }

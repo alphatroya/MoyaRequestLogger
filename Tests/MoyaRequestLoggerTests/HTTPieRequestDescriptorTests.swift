@@ -83,4 +83,54 @@ class HTTPieRequestDescriptorTests: XCTestCase {
         // THEN
         XCTAssertEqual(result, "http PUT www.url.com/issue Header:'Header Value' Header2:'Header Value 2'")
     }
+
+    func testDescriptorShouldCorrectFormatURLEncodedRequest() {
+        // GIVEN
+        let parameters: Task = .requestParameters(
+            parameters: [
+                "param1": "value1",
+                "param2": "value2",
+            ],
+            encoding: URLEncoding()
+        )
+        let target = MockTarget(
+            // swiftlint:disable:next force_unwrapping
+            baseURL: URL(string: "www.url.com")!,
+            path: "issue2",
+            method: .delete,
+            sampleData: Data(),
+            task: parameters,
+            headers: nil
+        )
+        let request = MockRequest()
+        // WHEN
+        let result = sut.description(request: request, target: target, logger: logger)
+        // THEN
+        XCTAssertEqual(result, "http DELETE www.url.com/issue2 param1==value1 param2==value2")
+    }
+
+    func testDescriptorShouldCorrectFormatJSONEncodedRequest() {
+        // GIVEN
+        let parameters: Task = .requestParameters(
+            parameters: [
+                "param1": "value1",
+                "param2": "value2",
+            ],
+            encoding: JSONEncoding()
+        )
+        let target = MockTarget(
+            // swiftlint:disable:next force_unwrapping
+            baseURL: URL(string: "www.url.com")!,
+            path: "issue2",
+            method: .delete,
+            sampleData: Data(),
+            task: parameters,
+            headers: nil
+        )
+        let request = MockRequest()
+        // WHEN
+        let result = sut.description(request: request, target: target, logger: logger)
+        // THEN
+        XCTAssertEqual(result, "echo '{\"param1\":\"value1\",\"param2\":\"value2\"}' | http DELETE www.url.com/issue2")
+    }
 }
