@@ -133,4 +133,28 @@ class HTTPieRequestDescriptorTests: XCTestCase {
         // THEN
         XCTAssertEqual(result, "echo '{\"param1\":\"value1\",\"param2\":\"value2\"}' | http DELETE www.url.com/issue2")
     }
+
+    func testDescriptorShouldCorrectFormatJSONEncodable() {
+        // GIVEN
+        // swiftlint:disable:next nesting
+        struct TestStruct: Encodable {
+            var id: Int
+            var text: String
+        }
+        let test = TestStruct(id: 1, text: "value")
+        let target = MockTarget(
+            // swiftlint:disable:next force_unwrapping
+            baseURL: URL(string: "www.url.com")!,
+            path: "issue2",
+            method: .delete,
+            sampleData: Data(),
+            task: .requestJSONEncodable(test),
+            headers: nil
+        )
+        let request = MockRequest()
+        // WHEN
+        let result = sut.description(request: request, target: target, logger: logger)
+        // THEN
+        XCTAssertEqual(result, "echo '{\"id\":1,\"text\":\"value\"}' | http DELETE www.url.com/issue2")
+    }
 }

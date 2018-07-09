@@ -62,9 +62,9 @@ final class ResponseLoggerPluginTests: XCTestCase {
         // THEN
         XCTAssertEqual(logger.messages[1], "==============BEGIN=================")
         XCTAssertEqual(logger.levels[1], .verbose)
-        XCTAssertEqual(logger.messages[2], " Request target: \(mockTarget)")
+        XCTAssertEqual(logger.messages[2], "Request target: \(mockTarget)")
         XCTAssertEqual(logger.levels[2], .verbose)
-        XCTAssertEqual(logger.messages[3], " Response data \(mockJSON)")
+        XCTAssertEqual(logger.messages[3], "Response data \(mockJSON)")
         XCTAssertEqual(logger.levels[3], .verbose)
         XCTAssertEqual(logger.messages[4], "===============END==================")
         XCTAssertEqual(logger.levels[4], .verbose)
@@ -77,9 +77,9 @@ final class ResponseLoggerPluginTests: XCTestCase {
         // WHEN
         plugin.didReceive(.failure(error), target: target)
         // THEN
-        XCTAssertEqual(logger.messages[1], " Request target: \(target)")
+        XCTAssertEqual(logger.messages[1], "Request target: \(target)")
         XCTAssertEqual(logger.levels[1], .warning)
-        XCTAssertEqual(logger.messages[2], " Response error \(error)")
+        XCTAssertEqual(logger.messages[2], "Response error \(error)")
         XCTAssertEqual(logger.levels[2], .warning)
     }
 

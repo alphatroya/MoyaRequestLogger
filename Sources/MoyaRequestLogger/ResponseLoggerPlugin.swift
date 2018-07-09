@@ -31,14 +31,14 @@ public final class ResponseLoggerPlugin: PluginType {
         switch result {
         case let .success(request):
             self.logger.log(with: .verbose, "==============BEGIN=================")
-            self.logger.log(with: .verbose, " Request target: \(target)")
+            self.logger.log(with: .verbose, "Request target: \(target)")
             if let string = String(data: request.data, encoding: .utf8) {
-                self.logger.log(with: .verbose, " Response data \(string)")
+                self.logger.log(with: .verbose, "Response data \(string)")
             }
             self.logger.log(with: .verbose, "===============END==================")
         case let .failure(error):
-            self.logger.log(with: .warning, " Request target: \(target)")
-            self.logger.log(with: .warning, " Response error \(error)")
+            self.logger.log(with: .warning, "Request target: \(target)")
+            self.logger.log(with: .warning, "Response error \(error)")
         }
     }
 }
