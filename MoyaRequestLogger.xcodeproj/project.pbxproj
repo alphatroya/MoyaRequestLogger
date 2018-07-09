@@ -11,6 +11,7 @@
 		B8DCA6C8AE07FE4CEBE7A91C /* RequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA649636F930A113349B4 /* RequestDescriptor.swift */; };
 		B8DCA838F80C9355A5C94E17 /* MockRequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA78213AEF0B7AD8E3315 /* MockRequestDescriptor.swift */; };
 		B8DCAB603ABEED28BF03ED0D /* MockLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA79DBA86F177F192DFD9 /* MockLogger.swift */; };
+		B8DCAB6EB7119AFFFFC5EE1B /* HTTPieRequestDescriptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA791F30F570A333BEF4B /* HTTPieRequestDescriptorTests.swift */; };
 		B8DCABC686C3208138574A48 /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* LoggerProtocol.swift */; };
 		B8DCAEA0ED47C619E8510F41 /* PlainLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCAF748D1CB1B40BB3C746 /* PlainLoggerTests.swift */; };
 		B8DCAF574B26F1B2ADC9715E /* MockTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA12967AE5C6D1483880B /* MockTarget.swift */; };
@@ -58,6 +59,7 @@
 		B8DCA12967AE5C6D1483880B /* MockTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTarget.swift; sourceTree = "<group>"; };
 		B8DCA649636F930A113349B4 /* RequestDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDescriptor.swift; sourceTree = "<group>"; };
 		B8DCA78213AEF0B7AD8E3315 /* MockRequestDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRequestDescriptor.swift; sourceTree = "<group>"; };
+		B8DCA791F30F570A333BEF4B /* HTTPieRequestDescriptorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPieRequestDescriptorTests.swift; sourceTree = "<group>"; };
 		B8DCA79DBA86F177F192DFD9 /* MockLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLogger.swift; sourceTree = "<group>"; };
 		B8DCA7A6D7D81E0A8332D193 /* MockRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRequest.swift; sourceTree = "<group>"; };
 		B8DCA81A93657481721A301F /* LoggerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerProtocol.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				D455048820DBDACC00F1276A /* MoyaRequestLoggerTests.swift */,
 				B8DCAF748D1CB1B40BB3C746 /* PlainLoggerTests.swift */,
 				B8DCA3F3661580810BE45D66 /* Mocks */,
+				B8DCA791F30F570A333BEF4B /* HTTPieRequestDescriptorTests.swift */,
 			);
 			path = MoyaRequestLoggerTests;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				B8DCA4A18A047937B03B3884 /* MockRequest.swift in Sources */,
 				B8DCA838F80C9355A5C94E17 /* MockRequestDescriptor.swift in Sources */,
 				B8DCAF574B26F1B2ADC9715E /* MockTarget.swift in Sources */,
+				B8DCAB6EB7119AFFFFC5EE1B /* HTTPieRequestDescriptorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

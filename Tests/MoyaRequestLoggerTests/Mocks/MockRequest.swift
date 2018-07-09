@@ -7,7 +7,7 @@ import Foundation
 import Moya
 
 final class MockRequest: RequestType {
-    private(set) var request: URLRequest?
+    var request: URLRequest?
 
     func authenticate(user _: String, password _: String, persistence _: URLCredential.Persistence) -> MockRequest {
         fatalError("authenticate(user:password:persistence:) has not been implemented")
