@@ -82,8 +82,4 @@ final class ResponseLoggerPluginTests: XCTestCase {
         XCTAssertEqual(logger.messages[2], "Response error \(error)")
         XCTAssertEqual(logger.levels[2], .warning)
     }
-
-    static var allTests = [
-        ("testExample", testRequestWillSendInfoMessage),
-    ]
 }

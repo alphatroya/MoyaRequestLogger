@@ -3,6 +3,7 @@
 // Copyright (c) 2018 Alpha Troya. All rights reserved.
 //
 
+import Alamofire
 import Foundation
 import Moya
 @testable import MoyaRequestLogger
@@ -10,7 +11,7 @@ import XCTest
 
 class HTTPieRequestDescriptorTests: XCTestCase {
     var sut: HTTPieRequestDescriptor!
-    var logger: LoggerProtocol!
+    var logger: MockLogger!
 
     override func setUp() {
         super.setUp()
@@ -134,6 +135,32 @@ class HTTPieRequestDescriptorTests: XCTestCase {
         XCTAssertEqual(result, "echo '{\"param1\":\"value1\",\"param2\":\"value2\"}' | http DELETE www.url.com/issue2")
     }
 
+    func testDescriptorShouldLogWarningInCaseOfUnknownEncoding() {
+        // GIVEN
+        // swiftlint:disable:next nesting
+        struct UnknownEncoding: ParameterEncoding {
+            func encode(_: URLRequestConvertible, with _: Parameters?) throws -> URLRequest {
+                fatalError("not implemented")
+            }
+        }
+
+        let encoding = UnknownEncoding()
+        let target = MockTarget(
+            // swiftlint:disable:next force_unwrapping
+            baseURL: URL(string: "www.url.com")!,
+            path: "issue2",
+            method: .delete,
+            sampleData: Data(),
+            task: .requestParameters(parameters: [:], encoding: encoding),
+            headers: nil
+        )
+        // WHEN
+        _ = sut.description(request: MockRequest(), target: target, logger: logger)
+        // THEN
+        XCTAssertEqual(logger.messages[0], "unknown request parameter type \(encoding)")
+        XCTAssertEqual(logger.levels[0], .warning)
+    }
+
     func testDescriptorShouldCorrectFormatJSONEncodable() {
         // GIVEN
         // swiftlint:disable:next nesting
@@ -141,6 +168,7 @@ class HTTPieRequestDescriptorTests: XCTestCase {
             var id: Int
             var text: String
         }
+
         let test = TestStruct(id: 1, text: "value")
         let target = MockTarget(
             // swiftlint:disable:next force_unwrapping
@@ -156,5 +184,24 @@ class HTTPieRequestDescriptorTests: XCTestCase {
         let result = sut.description(request: request, target: target, logger: logger)
         // THEN
         XCTAssertEqual(result, "echo '{\"id\":1,\"text\":\"value\"}' | http DELETE www.url.com/issue2")
+    }
+
+    func testDescriptorShouldLogWarningMessageInCaseOfUnimplementedTask() {
+        // GIVEN
+        let task = Task.uploadMultipart([])
+        let target = MockTarget(
+            // swiftlint:disable:next force_unwrapping
+            baseURL: URL(string: "www.url.com")!,
+            path: "issue2",
+            method: .delete,
+            sampleData: Data(),
+            task: task,
+            headers: nil
+        )
+        // WHEN
+        _ = sut.description(request: MockRequest(), target: target, logger: logger)
+        // THEN
+        XCTAssertEqual(logger.messages[0], "task description not yet implemented \(task)")
+        XCTAssertEqual(logger.levels[0], .warning)
     }
 }
