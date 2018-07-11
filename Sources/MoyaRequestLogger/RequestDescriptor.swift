@@ -11,6 +11,8 @@ public protocol RequestDescriptor {
 }
 
 public final class HTTPieRequestDescriptor: RequestDescriptor {
+    public init() {}
+
     public func description(request: RequestType, target: TargetType, logger: LoggerProtocol) -> String {
         return target.httpie(request: request, logger: logger)
     }
