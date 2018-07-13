@@ -137,13 +137,6 @@ class HTTPieRequestDescriptorTests: XCTestCase {
 
     func testDescriptorShouldLogWarningInCaseOfUnknownEncoding() {
         // GIVEN
-        // swiftlint:disable:next nesting
-        struct UnknownEncoding: ParameterEncoding {
-            func encode(_: URLRequestConvertible, with _: Parameters?) throws -> URLRequest {
-                fatalError("not implemented")
-            }
-        }
-
         let encoding = UnknownEncoding()
         let target = MockTarget(
             // swiftlint:disable:next force_unwrapping
@@ -203,5 +196,11 @@ class HTTPieRequestDescriptorTests: XCTestCase {
         // THEN
         XCTAssertEqual(logger.messages[0], "task description not yet implemented \(task)")
         XCTAssertEqual(logger.levels[0], .warning)
+    }
+}
+
+private struct UnknownEncoding: ParameterEncoding {
+    func encode(_: URLRequestConvertible, with _: Parameters?) throws -> URLRequest {
+        fatalError("not implemented")
     }
 }
