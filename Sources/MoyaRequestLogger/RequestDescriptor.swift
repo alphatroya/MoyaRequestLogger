@@ -11,6 +11,8 @@ public protocol RequestDescriptor {
 }
 
 public final class HTTPieRequestDescriptor: RequestDescriptor {
+    public init() {}
+
     public func description(request: RequestType, target: TargetType, logger: LoggerProtocol) -> String {
         return target.httpie(request: request, logger: logger)
     }
@@ -38,7 +40,7 @@ private extension TargetType {
             case _ as JSONEncoding:
                 fragments.insert("echo '\(prettyPrinted(json: parameters))' |", at: 0)
             default:
-                break
+                logger.log(with: .warning, "unknown request parameter type \(encoding)")
             }
         case let .requestJSONEncodable(encodable):
             do {
@@ -47,7 +49,7 @@ private extension TargetType {
                 logger.log(with: .verbose, "can't encode model object")
             }
         default:
-            logger.log(with: .verbose, "type of task not implemented \(task)")
+            logger.log(with: .warning, "task description not yet implemented \(task)")
         }
 
         return fragments.joined(separator: " ")
