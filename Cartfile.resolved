@@ -1,5 +1,6 @@
-github "Alamofire/Alamofire" "4.7.2"
-github "Moya/Moya" "94119c4230f88a0cf01cb9b523abcdf21cc51a8f"
+github "Alamofire/Alamofire" "4.7.3"
+github "Moya/Moya" "11.0.2"
 github "ReactiveCocoa/ReactiveSwift" "3.1.0"
 github "ReactiveX/RxSwift" "4.2.0"
 github "antitypical/Result" "3.2.4"
+github "jdhealy/PrettyColors" "5.0.1"

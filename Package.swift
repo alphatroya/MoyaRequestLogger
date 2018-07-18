@@ -13,11 +13,12 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/Moya/Moya.git", .upToNextMajor(from: "11.0.0")),
+        .package(url: "https://github.com/jdhealy/PrettyColors.git", .upToNextMajor(from: "5.0.0")),
     ],
     targets: [
         .target(
             name: "MoyaRequestLogger",
-            dependencies: ["Moya"]),
+            dependencies: ["Moya", "PrettyColors"]),
         .testTarget(
             name: "MoyaRequestLoggerTests",
             dependencies: ["MoyaRequestLogger"]),
