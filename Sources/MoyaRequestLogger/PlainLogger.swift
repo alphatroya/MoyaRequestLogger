@@ -1,17 +1,9 @@
 //
-// Created by Alexey Korolev on 21.06.2018.
+// Created by Alexey Korolev on 19.07.2018.
 // Copyright (c) 2018 Alpha Troya. All rights reserved.
 //
 
 import Foundation
-
-public enum LoggerLevel {
-    case verbose, info, warning
-}
-
-public protocol LoggerProtocol {
-    func log(with level: LoggerLevel, _ message: String)
-}
 
 public typealias PlainLoggerClosure = ((String) -> Void)
 
@@ -22,7 +14,7 @@ public final class PlainLogger {
     }
 }
 
-extension PlainLogger: LoggerProtocol {
+extension PlainLogger: Logger {
     public func log(with level: LoggerLevel, _ message: String) {
         switch level {
         case .info:

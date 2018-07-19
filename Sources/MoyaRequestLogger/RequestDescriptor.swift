@@ -7,19 +7,19 @@ import Foundation
 import Moya
 
 public protocol RequestDescriptor {
-    func description(request: RequestType, target: TargetType, logger: LoggerProtocol) -> String
+    func description(request: RequestType, target: TargetType, logger: Logger) -> String
 }
 
 public final class HTTPieRequestDescriptor: RequestDescriptor {
     public init() {}
 
-    public func description(request: RequestType, target: TargetType, logger: LoggerProtocol) -> String {
+    public func description(request: RequestType, target: TargetType, logger: Logger) -> String {
         return target.httpie(request: request, logger: logger)
     }
 }
 
 private extension TargetType {
-    func httpie(request: RequestType, logger: LoggerProtocol) -> String {
+    func httpie(request: RequestType, logger: Logger) -> String {
         var fragments = [
             "http",
             self.method.rawValue.uppercased(),
