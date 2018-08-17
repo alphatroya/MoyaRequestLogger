@@ -13,7 +13,7 @@ public class ColorLogger {
 
     public init(
         configuration: LoggerConfiguration = .standard(),
-        logClosure: @escaping ColorLoggerResultClosure
+        logClosure: @escaping ColorLoggerResultClosure = { print($0) }
     ) {
         self.configuration = configuration
         self.logClosure = logClosure
@@ -40,7 +40,7 @@ extension ColorLogger: Logger {
             var colorWrap = [String]()
             colorWrap.append(configuration.color[level, default: .black].ansiCode)
             colorWrap.append(result)
-            colorWrap.append(LoggerANSIColor.black.ansiCode)
+            colorWrap.append(LoggerConfiguration.resetSequence)
             logClosure(colorWrap.joined())
         }
     }

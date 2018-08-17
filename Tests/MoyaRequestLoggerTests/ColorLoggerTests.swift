@@ -7,6 +7,9 @@ import Foundation
 import MoyaRequestLogger
 import XCTest
 
+let kEscapeSequence = "\u{001b}["
+let kResetSequence = "\(kEscapeSequence)m"
+
 class ColorLoggerTests: XCTestCase {
     var sut: ColorLogger!
 
@@ -24,7 +27,7 @@ class ColorLoggerTests: XCTestCase {
         // WHEN
         sut.log(with: .verbose, "test")
         // THEN
-        XCTAssertEqual(result, "\033[0;34m[NETWORK_VERBOSE] > test\033[0;30m")
+        XCTAssertEqual(result, "\(kEscapeSequence)0;34m[NETWORK_VERBOSE] > test\(kResetSequence)")
     }
 
     func testColorLoggerShouldPrintCorrectDefaultWarningMessage() {
@@ -36,7 +39,7 @@ class ColorLoggerTests: XCTestCase {
         // WHEN
         sut.log(with: .warning, "test")
         // THEN
-        XCTAssertEqual(result, "\033[0;31m[NETWORK_WARNING] > test\033[0;30m")
+        XCTAssertEqual(result, "\(kEscapeSequence)0;31m[NETWORK_WARNING] > test\(kResetSequence)")
     }
 
     func testColorLoggerShouldPrintCorrectDefaultInfoMessage() {
@@ -48,7 +51,7 @@ class ColorLoggerTests: XCTestCase {
         // WHEN
         sut.log(with: .info, "test")
         // THEN
-        XCTAssertEqual(result, "\033[0;32m[NETWORK_INFO] > test\033[0;30m")
+        XCTAssertEqual(result, "\(kEscapeSequence)0;32m[NETWORK_INFO] > test\(kResetSequence)")
     }
 
     func testColorLoggerShouldPrintCorrectWarningMessageWithoutColors() {

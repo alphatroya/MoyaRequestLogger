@@ -5,10 +5,14 @@
 
 import Foundation
 
+private let kEscapeSequence = "\u{001b}["
+
 public struct LoggerConfiguration {
     public static func standard() -> LoggerConfiguration {
         return LoggerConfiguration()
     }
+
+    static let resetSequence = "\(kEscapeSequence)m"
 
     init() {}
 
@@ -34,13 +38,13 @@ enum LoggerANSIColor {
     var ansiCode: String {
         switch self {
         case .black:
-            return "\033[0;30m"
+            return "\(kEscapeSequence)0;30m"
         case .red:
-            return "\033[0;31m"
+            return "\(kEscapeSequence)0;31m"
         case .green:
-            return "\033[0;32m"
+            return "\(kEscapeSequence)0;32m"
         case .blue:
-            return "\033[0;34m"
+            return "\(kEscapeSequence)0;34m"
         }
     }
 }
