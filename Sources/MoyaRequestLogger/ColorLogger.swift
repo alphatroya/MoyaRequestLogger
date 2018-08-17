@@ -4,13 +4,44 @@
 //
 
 import Foundation
-import PrettyColors
+
+public typealias ColorLoggerResultClosure = (String) -> Void
 
 public class ColorLogger {
-    public init() {}
+    let logClosure: ColorLoggerResultClosure
+    let configuration: LoggerConfiguration
+
+    public init(
+        configuration: LoggerConfiguration = .standard(),
+        logClosure: @escaping ColorLoggerResultClosure
+    ) {
+        self.configuration = configuration
+        self.logClosure = logClosure
+    }
 }
 
 extension ColorLogger: Logger {
-    public func log(with _: LoggerLevel, _: String) {
+    public func log(with level: LoggerLevel, _ message: String) {
+        var parts: [String] = []
+        switch level {
+        case .info:
+            parts.append(configuration.infoMessage)
+        case .verbose:
+            parts.append(configuration.verboseMessage)
+        case .warning:
+            parts.append(configuration.warningMessage)
+        }
+        parts.append(configuration.statusMessageSeparator)
+        parts.append(message)
+        let result = parts.joined(separator: " ")
+        if !configuration.isColor {
+            logClosure(result)
+        } else {
+            var colorWrap = [String]()
+            colorWrap.append(configuration.color[level, default: .black].ansiCode)
+            colorWrap.append(result)
+            colorWrap.append(LoggerANSIColor.black.ansiCode)
+            logClosure(colorWrap.joined())
+        }
     }
 }

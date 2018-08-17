@@ -62,3 +62,4 @@ identifier_name:
     error: 32
 cyclomatic_complexity:
   error: 30
+
