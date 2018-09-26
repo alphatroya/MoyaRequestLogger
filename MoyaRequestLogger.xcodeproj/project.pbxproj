@@ -445,9 +445,11 @@
 					};
 					D455046620DBDA7C00F1276A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					D455046F20DBDA7D00F1276A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -909,7 +911,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alphatroya.MoyaRequestLogger;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -938,7 +940,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alphatroya.MoyaRequestLogger;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -962,7 +964,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alphatroya.MoyaRequestLoggerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -986,7 +988,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alphatroya.MoyaRequestLoggerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
