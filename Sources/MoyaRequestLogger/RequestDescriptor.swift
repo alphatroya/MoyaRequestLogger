@@ -36,7 +36,7 @@ private extension TargetType {
         case let .requestParameters(parameters, encoding):
             switch encoding {
             case _ as URLEncoding:
-                parameters.map { "\($0.key)==\($0.value)" }.forEach { fragments.append($0) }
+                parameters.map { "\($0.key)==\($0.value)" }.sorted().forEach { fragments.append($0) }
             case _ as JSONEncoding:
                 fragments.insert("echo '\(prettyPrinted(json: parameters))' |", at: 0)
             default:
