@@ -104,4 +104,58 @@ class ColorLoggerTests: XCTestCase {
         // THEN
         XCTAssertEqual(result, "[NETWORK_INFO] > test")
     }
+
+    func testColorLoggerShouldChangeNetworkInfoItemPrefix() {
+        // GIVEN
+        var result: String!
+        var configuration = LoggerConfiguration.standard()
+        configuration.isColor = false
+        configuration.infoMessage = "Info"
+        sut = ColorLogger(
+            configuration: configuration,
+            logClosure: {
+                result = $0
+            }
+        )
+        // WHEN
+        sut.log(with: .info, "test")
+        // THEN
+        XCTAssertEqual(result, "Info > test")
+    }
+
+    func testColorLoggerShouldChangeNetworkVerboseItemPrefix() {
+        // GIVEN
+        var result: String!
+        var configuration = LoggerConfiguration.standard()
+        configuration.isColor = false
+        configuration.verboseMessage = "Verbose"
+        sut = ColorLogger(
+            configuration: configuration,
+            logClosure: {
+                result = $0
+            }
+        )
+        // WHEN
+        sut.log(with: .verbose, "test")
+        // THEN
+        XCTAssertEqual(result, "Verbose > test")
+    }
+
+    func testColorLoggerShouldChangeNetworkErrorItemPrefix() {
+        // GIVEN
+        var result: String!
+        var configuration = LoggerConfiguration.standard()
+        configuration.isColor = false
+        configuration.warningMessage = "Error"
+        sut = ColorLogger(
+            configuration: configuration,
+            logClosure: {
+                result = $0
+            }
+        )
+        // WHEN
+        sut.log(with: .warning, "test")
+        // THEN
+        XCTAssertEqual(result, "Error > test")
+    }
 }
