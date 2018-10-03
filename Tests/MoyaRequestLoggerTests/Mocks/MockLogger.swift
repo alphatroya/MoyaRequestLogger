@@ -10,8 +10,7 @@ final class MockLogger: Logger {
     var levels: [LoggerLevel] = []
     var messages: [String] = []
 
-    init() {
-    }
+    init() {}
 
     func log(with level: LoggerLevel, _ message: String) {
         levels += [level]
