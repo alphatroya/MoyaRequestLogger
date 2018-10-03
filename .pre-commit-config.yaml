@@ -3,3 +3,4 @@ repos:
     rev: 0.35.2
     hooks:
     -   id: swiftformat
+        exclude: Carthage
