@@ -7,19 +7,19 @@ import Foundation
 import Moya
 
 public protocol RequestDescriptor {
-    func description(request: RequestType, target: TargetType, logger: LoggerProtocol) -> String
+    func description(request: RequestType, target: TargetType, logger: Logger) -> String
 }
 
 public final class HTTPieRequestDescriptor: RequestDescriptor {
     public init() {}
 
-    public func description(request: RequestType, target: TargetType, logger: LoggerProtocol) -> String {
+    public func description(request: RequestType, target: TargetType, logger: Logger) -> String {
         return target.httpie(request: request, logger: logger)
     }
 }
 
 private extension TargetType {
-    func httpie(request: RequestType, logger: LoggerProtocol) -> String {
+    func httpie(request: RequestType, logger: Logger) -> String {
         var fragments = [
             "http",
             self.method.rawValue.uppercased(),
@@ -36,7 +36,7 @@ private extension TargetType {
         case let .requestParameters(parameters, encoding):
             switch encoding {
             case _ as URLEncoding:
-                parameters.map { "\($0.key)==\($0.value)" }.forEach { fragments.append($0) }
+                parameters.map { "\($0.key)==\($0.value)" }.sorted().forEach { fragments.append($0) }
             case _ as JSONEncoding:
                 fragments.insert("echo '\(prettyPrinted(json: parameters))' |", at: 0)
             default:

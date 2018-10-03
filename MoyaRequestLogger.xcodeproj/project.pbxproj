@@ -7,22 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8DCA31A45639A463C7F01F0 /* LoggerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA76797D42B79BB480507 /* LoggerConfiguration.swift */; };
 		B8DCA4A18A047937B03B3884 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA7A6D7D81E0A8332D193 /* MockRequest.swift */; };
+		B8DCA56140BF7BEC93D6B189 /* ColorLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA2D0E697A5A55ED69B54 /* ColorLoggerTests.swift */; };
+		B8DCA63DC0A97D85DE2C7735 /* LoggerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA76797D42B79BB480507 /* LoggerConfiguration.swift */; };
+		B8DCA69D09B7268C5ABDCC85 /* ColorLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCAD0C12E3F9D55C1D017C /* ColorLogger.swift */; };
 		B8DCA6C8AE07FE4CEBE7A91C /* RequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA649636F930A113349B4 /* RequestDescriptor.swift */; };
+		B8DCA700A1710FCBAF3D0071 /* LoggerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA76797D42B79BB480507 /* LoggerConfiguration.swift */; };
+		B8DCA76EDF052DDAAC22D782 /* ColorLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCAD0C12E3F9D55C1D017C /* ColorLogger.swift */; };
 		B8DCA838F80C9355A5C94E17 /* MockRequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA78213AEF0B7AD8E3315 /* MockRequestDescriptor.swift */; };
+		B8DCA8AE701B6DBED6530C07 /* ColorLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCAD0C12E3F9D55C1D017C /* ColorLogger.swift */; };
+		B8DCAA00CB5BE2EE3DA5FF80 /* ColorLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCAD0C12E3F9D55C1D017C /* ColorLogger.swift */; };
 		B8DCAB603ABEED28BF03ED0D /* MockLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA79DBA86F177F192DFD9 /* MockLogger.swift */; };
 		B8DCAB6EB7119AFFFFC5EE1B /* HTTPieRequestDescriptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA791F30F570A333BEF4B /* HTTPieRequestDescriptorTests.swift */; };
-		B8DCABC686C3208138574A48 /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* LoggerProtocol.swift */; };
-		B8DCAEA0ED47C619E8510F41 /* PlainLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCAF748D1CB1B40BB3C746 /* PlainLoggerTests.swift */; };
+		B8DCABC686C3208138574A48 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* Logger.swift */; };
+		B8DCADE254D0B67B34112DD0 /* LoggerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA76797D42B79BB480507 /* LoggerConfiguration.swift */; };
 		B8DCAF574B26F1B2ADC9715E /* MockTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA12967AE5C6D1483880B /* MockTarget.swift */; };
 		D437033E20E3889B00855FC1 /* ResponseLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048320DBDABE00F1276A /* ResponseLoggerPlugin.swift */; };
-		D437033F20E3889B00855FC1 /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* LoggerProtocol.swift */; };
+		D437033F20E3889B00855FC1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* Logger.swift */; };
 		D437034020E3889B00855FC1 /* RequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA649636F930A113349B4 /* RequestDescriptor.swift */; };
 		D437034120E3889C00855FC1 /* ResponseLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048320DBDABE00F1276A /* ResponseLoggerPlugin.swift */; };
-		D437034220E3889C00855FC1 /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* LoggerProtocol.swift */; };
+		D437034220E3889C00855FC1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* Logger.swift */; };
 		D437034320E3889C00855FC1 /* RequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA649636F930A113349B4 /* RequestDescriptor.swift */; };
 		D437034420E3889D00855FC1 /* ResponseLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455048320DBDABE00F1276A /* ResponseLoggerPlugin.swift */; };
-		D437034520E3889D00855FC1 /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* LoggerProtocol.swift */; };
+		D437034520E3889D00855FC1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA81A93657481721A301F /* Logger.swift */; };
 		D437034620E3889D00855FC1 /* RequestDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA649636F930A113349B4 /* RequestDescriptor.swift */; };
 		D455047120DBDA7D00F1276A /* MoyaRequestLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D455046720DBDA7C00F1276A /* MoyaRequestLogger.framework */; };
 		D455047820DBDA7D00F1276A /* MoyaRequestLogger_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D455046A20DBDA7D00F1276A /* MoyaRequestLogger_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -57,13 +65,15 @@
 
 /* Begin PBXFileReference section */
 		B8DCA12967AE5C6D1483880B /* MockTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTarget.swift; sourceTree = "<group>"; };
+		B8DCA2D0E697A5A55ED69B54 /* ColorLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorLoggerTests.swift; sourceTree = "<group>"; };
 		B8DCA649636F930A113349B4 /* RequestDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDescriptor.swift; sourceTree = "<group>"; };
+		B8DCA76797D42B79BB480507 /* LoggerConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerConfiguration.swift; sourceTree = "<group>"; };
 		B8DCA78213AEF0B7AD8E3315 /* MockRequestDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRequestDescriptor.swift; sourceTree = "<group>"; };
 		B8DCA791F30F570A333BEF4B /* HTTPieRequestDescriptorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPieRequestDescriptorTests.swift; sourceTree = "<group>"; };
 		B8DCA79DBA86F177F192DFD9 /* MockLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLogger.swift; sourceTree = "<group>"; };
 		B8DCA7A6D7D81E0A8332D193 /* MockRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRequest.swift; sourceTree = "<group>"; };
-		B8DCA81A93657481721A301F /* LoggerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerProtocol.swift; sourceTree = "<group>"; };
-		B8DCAF748D1CB1B40BB3C746 /* PlainLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlainLoggerTests.swift; sourceTree = "<group>"; };
+		B8DCA81A93657481721A301F /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B8DCAD0C12E3F9D55C1D017C /* ColorLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorLogger.swift; sourceTree = "<group>"; };
 		D437031C20E3880A00855FC1 /* MoyaRequestLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoyaRequestLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D437031E20E3880A00855FC1 /* MoyaRequestLogger_MacOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoyaRequestLogger_MacOS.h; sourceTree = "<group>"; };
 		D437031F20E3880A00855FC1 /* Info_MacOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_MacOS.plist; sourceTree = "<group>"; };
@@ -211,9 +221,9 @@
 			isa = PBXGroup;
 			children = (
 				D455048820DBDACC00F1276A /* MoyaRequestLoggerTests.swift */,
-				B8DCAF748D1CB1B40BB3C746 /* PlainLoggerTests.swift */,
 				B8DCA3F3661580810BE45D66 /* Mocks */,
 				B8DCA791F30F570A333BEF4B /* HTTPieRequestDescriptorTests.swift */,
+				B8DCA2D0E697A5A55ED69B54 /* ColorLoggerTests.swift */,
 			);
 			path = MoyaRequestLoggerTests;
 			sourceTree = "<group>";
@@ -222,8 +232,10 @@
 			isa = PBXGroup;
 			children = (
 				D455048320DBDABE00F1276A /* ResponseLoggerPlugin.swift */,
-				B8DCA81A93657481721A301F /* LoggerProtocol.swift */,
+				B8DCA81A93657481721A301F /* Logger.swift */,
 				B8DCA649636F930A113349B4 /* RequestDescriptor.swift */,
+				B8DCAD0C12E3F9D55C1D017C /* ColorLogger.swift */,
+				B8DCA76797D42B79BB480507 /* LoggerConfiguration.swift */,
 			);
 			path = MoyaRequestLogger;
 			sourceTree = "<group>";
@@ -433,9 +445,11 @@
 					};
 					D455046620DBDA7C00F1276A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					D455046F20DBDA7D00F1276A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -505,8 +519,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D437033E20E3889B00855FC1 /* ResponseLoggerPlugin.swift in Sources */,
-				D437033F20E3889B00855FC1 /* LoggerProtocol.swift in Sources */,
+				D437033F20E3889B00855FC1 /* Logger.swift in Sources */,
 				D437034020E3889B00855FC1 /* RequestDescriptor.swift in Sources */,
+				B8DCA8AE701B6DBED6530C07 /* ColorLogger.swift in Sources */,
+				B8DCADE254D0B67B34112DD0 /* LoggerConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,8 +531,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D437034120E3889C00855FC1 /* ResponseLoggerPlugin.swift in Sources */,
-				D437034220E3889C00855FC1 /* LoggerProtocol.swift in Sources */,
+				D437034220E3889C00855FC1 /* Logger.swift in Sources */,
 				D437034320E3889C00855FC1 /* RequestDescriptor.swift in Sources */,
+				B8DCA69D09B7268C5ABDCC85 /* ColorLogger.swift in Sources */,
+				B8DCA63DC0A97D85DE2C7735 /* LoggerConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,8 +543,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D437034420E3889D00855FC1 /* ResponseLoggerPlugin.swift in Sources */,
-				D437034520E3889D00855FC1 /* LoggerProtocol.swift in Sources */,
+				D437034520E3889D00855FC1 /* Logger.swift in Sources */,
 				D437034620E3889D00855FC1 /* RequestDescriptor.swift in Sources */,
+				B8DCAA00CB5BE2EE3DA5FF80 /* ColorLogger.swift in Sources */,
+				B8DCA31A45639A463C7F01F0 /* LoggerConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,8 +555,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D455048420DBDABF00F1276A /* ResponseLoggerPlugin.swift in Sources */,
-				B8DCABC686C3208138574A48 /* LoggerProtocol.swift in Sources */,
+				B8DCABC686C3208138574A48 /* Logger.swift in Sources */,
 				B8DCA6C8AE07FE4CEBE7A91C /* RequestDescriptor.swift in Sources */,
+				B8DCA76EDF052DDAAC22D782 /* ColorLogger.swift in Sources */,
+				B8DCA700A1710FCBAF3D0071 /* LoggerConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,12 +567,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D455048B20DBDACC00F1276A /* MoyaRequestLoggerTests.swift in Sources */,
-				B8DCAEA0ED47C619E8510F41 /* PlainLoggerTests.swift in Sources */,
 				B8DCAB603ABEED28BF03ED0D /* MockLogger.swift in Sources */,
 				B8DCA4A18A047937B03B3884 /* MockRequest.swift in Sources */,
 				B8DCA838F80C9355A5C94E17 /* MockRequestDescriptor.swift in Sources */,
 				B8DCAF574B26F1B2ADC9715E /* MockTarget.swift in Sources */,
 				B8DCAB6EB7119AFFFFC5EE1B /* HTTPieRequestDescriptorTests.swift in Sources */,
+				B8DCA56140BF7BEC93D6B189 /* ColorLoggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -889,7 +911,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alphatroya.MoyaRequestLogger;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -918,7 +940,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alphatroya.MoyaRequestLogger;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -942,7 +964,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alphatroya.MoyaRequestLoggerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -966,7 +988,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alphatroya.MoyaRequestLoggerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

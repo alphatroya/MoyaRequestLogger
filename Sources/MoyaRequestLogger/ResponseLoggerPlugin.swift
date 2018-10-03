@@ -8,11 +8,11 @@ import Moya
 import enum Result.Result
 
 public final class ResponseLoggerPlugin: PluginType {
-    private let logger: LoggerProtocol
+    private let logger: Logger
     private let descriptors: [RequestDescriptor]
 
     public init(
-        logger: LoggerProtocol,
+        logger: Logger,
         descriptors: RequestDescriptor...
     ) {
         self.logger = logger

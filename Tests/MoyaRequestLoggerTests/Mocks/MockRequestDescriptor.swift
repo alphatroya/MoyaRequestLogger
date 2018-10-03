@@ -14,7 +14,7 @@ final class MockRequestDescriptor: RequestDescriptor {
         mockDescription = description
     }
 
-    func description(request _: RequestType, target _: TargetType, logger _: LoggerProtocol) -> String {
+    func description(request _: RequestType, target _: TargetType, logger _: Logger) -> String {
         return mockDescription
     }
 }

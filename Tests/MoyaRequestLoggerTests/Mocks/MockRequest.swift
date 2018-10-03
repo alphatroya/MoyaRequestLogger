@@ -17,6 +17,5 @@ final class MockRequest: RequestType {
         fatalError("authenticate(credential:) has not been implemented")
     }
 
-    init() {
-    }
+    init() {}
 }

@@ -132,7 +132,9 @@ class HTTPieRequestDescriptorTests: XCTestCase {
         // WHEN
         let result = sut.description(request: request, target: target, logger: logger)
         // THEN
-        XCTAssertEqual(result, "echo '{\"param1\":\"value1\",\"param2\":\"value2\"}' | http DELETE www.url.com/issue2")
+        let testString = "echo '{\"param1\":\"value1\",\"param2\":\"value2\"}' | http DELETE www.url.com/issue2"
+        let testString2 = "echo '{\"param2\":\"value2\",\"param1\":\"value1\"}' | http DELETE www.url.com/issue2"
+        XCTAssertTrue(result == testString || result == testString2)
     }
 
     func testDescriptorShouldLogWarningInCaseOfUnknownEncoding() {
