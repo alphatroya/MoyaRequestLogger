@@ -8,7 +8,7 @@ import Foundation
 private let kEscapeSequence = "\u{001b}["
 
 public struct LoggerConfiguration {
-    public static func standard() -> LoggerConfiguration {
+    public static var standard: LoggerConfiguration {
         return LoggerConfiguration()
     }
 
@@ -21,6 +21,12 @@ public struct LoggerConfiguration {
     public var infoMessage = "[NETWORK_INFO]"
     public var warningMessage = "[NETWORK_WARNING]"
     public var verboseMessage = "[NETWORK_VERBOSE]"
+    public var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm:ss a"
+        dateFormatter.locale = Locale(identifier: "en")
+        return dateFormatter
+    }()
 
     var color: [LoggerLevel: LoggerANSIColor] = [
         LoggerLevel.info: LoggerANSIColor.green,

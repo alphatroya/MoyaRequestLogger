@@ -21,141 +21,213 @@ class ColorLoggerTests: XCTestCase {
     func testColorLoggerShouldPrintCorrectDefaultVerboseMessage() {
         // GIVEN
         var result: String!
-        sut = ColorLogger(logClosure: {
-            result = $0
-        })
+        sut = ColorLogger(
+            configuration: LoggerConfiguration.fixedTimeZoneFormatter,
+            logClosure: {
+                result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
+            }
+        )
         // WHEN
         sut.log(with: .verbose, "test")
         // THEN
-        XCTAssertEqual(result, "\(kEscapeSequence)0;34m[NETWORK_VERBOSE] > test\(kResetSequence)")
+        XCTAssertEqual(result, "\(kEscapeSequence)0;34m03:01:25 AM [NETWORK_VERBOSE] > test\(kResetSequence)")
     }
 
     func testColorLoggerShouldPrintCorrectDefaultWarningMessage() {
         // GIVEN
         var result: String!
-        sut = ColorLogger(logClosure: {
-            result = $0
-        })
+        sut = ColorLogger(
+            configuration: LoggerConfiguration.fixedTimeZoneFormatter,
+            logClosure: {
+                result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
+            }
+        )
         // WHEN
         sut.log(with: .warning, "test")
         // THEN
-        XCTAssertEqual(result, "\(kEscapeSequence)0;31m[NETWORK_WARNING] > test\(kResetSequence)")
+        XCTAssertEqual(result, "\(kEscapeSequence)0;31m03:01:25 AM [NETWORK_WARNING] > test\(kResetSequence)")
     }
 
     func testColorLoggerShouldPrintCorrectDefaultInfoMessage() {
         // GIVEN
         var result: String!
-        sut = ColorLogger(logClosure: {
-            result = $0
-        })
+        sut = ColorLogger(
+            configuration: LoggerConfiguration.fixedTimeZoneFormatter,
+            logClosure: {
+                result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
+            }
+        )
         // WHEN
         sut.log(with: .info, "test")
         // THEN
-        XCTAssertEqual(result, "\(kEscapeSequence)0;32m[NETWORK_INFO] > test\(kResetSequence)")
+        XCTAssertEqual(result, "\(kEscapeSequence)0;32m03:01:25 AM [NETWORK_INFO] > test\(kResetSequence)")
     }
 
     func testColorLoggerShouldPrintCorrectWarningMessageWithoutColors() {
         // GIVEN
         var result: String!
-        var configuration = LoggerConfiguration.standard()
+        var configuration = LoggerConfiguration.fixedTimeZoneFormatter
         configuration.isColor = false
         sut = ColorLogger(
             configuration: configuration,
             logClosure: {
                 result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
             }
         )
         // WHEN
         sut.log(with: .warning, "test")
         // THEN
-        XCTAssertEqual(result, "[NETWORK_WARNING] > test")
+        XCTAssertEqual(result, "03:01:25 AM [NETWORK_WARNING] > test")
     }
 
     func testColorLoggerShouldPrintCorrectVerboseMessageWithoutColors() {
         // GIVEN
         var result: String!
-        var configuration = LoggerConfiguration.standard()
+        var configuration = LoggerConfiguration.fixedTimeZoneFormatter
         configuration.isColor = false
         sut = ColorLogger(
             configuration: configuration,
             logClosure: {
                 result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
             }
         )
         // WHEN
         sut.log(with: .verbose, "test")
         // THEN
-        XCTAssertEqual(result, "[NETWORK_VERBOSE] > test")
+        XCTAssertEqual(result, "03:01:25 AM [NETWORK_VERBOSE] > test")
     }
 
     func testColorLoggerShouldPrintCorrectInfoMessageWithoutColors() {
         // GIVEN
         var result: String!
-        var configuration = LoggerConfiguration.standard()
+        var configuration = LoggerConfiguration.fixedTimeZoneFormatter
         configuration.isColor = false
         sut = ColorLogger(
             configuration: configuration,
             logClosure: {
                 result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 86)
             }
         )
         // WHEN
         sut.log(with: .info, "test")
         // THEN
-        XCTAssertEqual(result, "[NETWORK_INFO] > test")
+        XCTAssertEqual(result, "03:01:26 AM [NETWORK_INFO] > test")
     }
 
     func testColorLoggerShouldChangeNetworkInfoItemPrefix() {
         // GIVEN
         var result: String!
-        var configuration = LoggerConfiguration.standard()
+        var configuration = LoggerConfiguration.fixedTimeZoneFormatter
         configuration.isColor = false
         configuration.infoMessage = "Info"
         sut = ColorLogger(
             configuration: configuration,
             logClosure: {
                 result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
             }
         )
         // WHEN
         sut.log(with: .info, "test")
         // THEN
-        XCTAssertEqual(result, "Info > test")
+        XCTAssertEqual(result, "03:01:25 AM Info > test")
     }
 
     func testColorLoggerShouldChangeNetworkVerboseItemPrefix() {
         // GIVEN
         var result: String!
-        var configuration = LoggerConfiguration.standard()
+        var configuration = LoggerConfiguration.fixedTimeZoneFormatter
         configuration.isColor = false
         configuration.verboseMessage = "Verbose"
         sut = ColorLogger(
             configuration: configuration,
             logClosure: {
                 result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
             }
         )
         // WHEN
         sut.log(with: .verbose, "test")
         // THEN
-        XCTAssertEqual(result, "Verbose > test")
+        XCTAssertEqual(result, "03:01:25 AM Verbose > test")
     }
 
     func testColorLoggerShouldChangeNetworkErrorItemPrefix() {
         // GIVEN
         var result: String!
-        var configuration = LoggerConfiguration.standard()
+        var configuration = LoggerConfiguration.fixedTimeZoneFormatter
         configuration.isColor = false
         configuration.warningMessage = "Error"
         sut = ColorLogger(
             configuration: configuration,
             logClosure: {
                 result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
             }
         )
         // WHEN
         sut.log(with: .warning, "test")
         // THEN
-        XCTAssertEqual(result, "Error > test")
+        XCTAssertEqual(result, "03:01:25 AM Error > test")
+    }
+
+    func testCustomDateFormatter() {
+        // GIVEN
+        var result: String!
+        var configuration = LoggerConfiguration.fixedTimeZoneFormatter
+        configuration.dateFormatter = {
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "en")
+            dateFormatter.dateFormat = "hh:mm"
+            dateFormatter.timeZone = TimeZone(secondsFromGMT: 3 * 60 * 60)
+            return dateFormatter
+        }()
+        sut = ColorLogger(
+            configuration: configuration,
+            logClosure: {
+                result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
+            }
+        )
+        // WHEN
+        sut.log(with: .info, "test")
+        // THEN
+        XCTAssertEqual(result, "\(kEscapeSequence)0;32m03:01 [NETWORK_INFO] > test\(kResetSequence)")
+    }
+}
+
+private extension LoggerConfiguration {
+    static var fixedTimeZoneFormatter: LoggerConfiguration {
+        var configuration = LoggerConfiguration.standard
+        let dateFormatter = configuration.dateFormatter
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 3 * 60 * 60)
+        configuration.dateFormatter = dateFormatter
+        return configuration
     }
 }
