@@ -6,23 +6,27 @@
 import Foundation
 
 public typealias ColorLoggerResultClosure = (String) -> Void
+public typealias ColorLoggerDateGenerator = () -> Date
 
 public class ColorLogger {
     let logClosure: ColorLoggerResultClosure
+    let dateGenerator: ColorLoggerDateGenerator
     let configuration: LoggerConfiguration
 
     public init(
         configuration: LoggerConfiguration = .standard(),
-        logClosure: @escaping ColorLoggerResultClosure = { print($0) }
+        logClosure: @escaping ColorLoggerResultClosure = { print($0) },
+        dateGenerator: @escaping ColorLoggerDateGenerator = { Date() }
     ) {
         self.configuration = configuration
         self.logClosure = logClosure
+        self.dateGenerator = dateGenerator
     }
 }
 
 extension ColorLogger: Logger {
     public func log(with level: LoggerLevel, _ message: String) {
-        var parts: [String] = []
+        var parts: [String] = [configuration.dateFormatter.string(from: self.dateGenerator())]
         switch level {
         case .info:
             parts.append(configuration.infoMessage)

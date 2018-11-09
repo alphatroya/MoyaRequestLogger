@@ -21,6 +21,12 @@ public struct LoggerConfiguration {
     public var infoMessage = "[NETWORK_INFO]"
     public var warningMessage = "[NETWORK_WARNING]"
     public var verboseMessage = "[NETWORK_VERBOSE]"
+    public var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:MM:ss a"
+        dateFormatter.locale = Locale(identifier: "en")
+        return dateFormatter
+    }()
 
     var color: [LoggerLevel: LoggerANSIColor] = [
         LoggerLevel.info: LoggerANSIColor.green,

@@ -21,37 +21,52 @@ class ColorLoggerTests: XCTestCase {
     func testColorLoggerShouldPrintCorrectDefaultVerboseMessage() {
         // GIVEN
         var result: String!
-        sut = ColorLogger(logClosure: {
-            result = $0
-        })
+        sut = ColorLogger(
+            logClosure: {
+                result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
+            }
+        )
         // WHEN
         sut.log(with: .verbose, "test")
         // THEN
-        XCTAssertEqual(result, "\(kEscapeSequence)0;34m[NETWORK_VERBOSE] > test\(kResetSequence)")
+        XCTAssertEqual(result, "\(kEscapeSequence)0;34m03:01:25 AM [NETWORK_VERBOSE] > test\(kResetSequence)")
     }
 
     func testColorLoggerShouldPrintCorrectDefaultWarningMessage() {
         // GIVEN
         var result: String!
-        sut = ColorLogger(logClosure: {
-            result = $0
-        })
+        sut = ColorLogger(
+            logClosure: {
+                result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
+            }
+        )
         // WHEN
         sut.log(with: .warning, "test")
         // THEN
-        XCTAssertEqual(result, "\(kEscapeSequence)0;31m[NETWORK_WARNING] > test\(kResetSequence)")
+        XCTAssertEqual(result, "\(kEscapeSequence)0;31m03:01:25 AM [NETWORK_WARNING] > test\(kResetSequence)")
     }
 
     func testColorLoggerShouldPrintCorrectDefaultInfoMessage() {
         // GIVEN
         var result: String!
-        sut = ColorLogger(logClosure: {
-            result = $0
-        })
+        sut = ColorLogger(
+            logClosure: {
+                result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
+            }
+        )
         // WHEN
         sut.log(with: .info, "test")
         // THEN
-        XCTAssertEqual(result, "\(kEscapeSequence)0;32m[NETWORK_INFO] > test\(kResetSequence)")
+        XCTAssertEqual(result, "\(kEscapeSequence)0;32m03:01:25 AM [NETWORK_INFO] > test\(kResetSequence)")
     }
 
     func testColorLoggerShouldPrintCorrectWarningMessageWithoutColors() {
@@ -63,12 +78,15 @@ class ColorLoggerTests: XCTestCase {
             configuration: configuration,
             logClosure: {
                 result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
             }
         )
         // WHEN
         sut.log(with: .warning, "test")
         // THEN
-        XCTAssertEqual(result, "[NETWORK_WARNING] > test")
+        XCTAssertEqual(result, "03:01:25 AM [NETWORK_WARNING] > test")
     }
 
     func testColorLoggerShouldPrintCorrectVerboseMessageWithoutColors() {
@@ -80,12 +98,15 @@ class ColorLoggerTests: XCTestCase {
             configuration: configuration,
             logClosure: {
                 result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
             }
         )
         // WHEN
         sut.log(with: .verbose, "test")
         // THEN
-        XCTAssertEqual(result, "[NETWORK_VERBOSE] > test")
+        XCTAssertEqual(result, "03:01:25 AM [NETWORK_VERBOSE] > test")
     }
 
     func testColorLoggerShouldPrintCorrectInfoMessageWithoutColors() {
@@ -97,12 +118,15 @@ class ColorLoggerTests: XCTestCase {
             configuration: configuration,
             logClosure: {
                 result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 86)
             }
         )
         // WHEN
         sut.log(with: .info, "test")
         // THEN
-        XCTAssertEqual(result, "[NETWORK_INFO] > test")
+        XCTAssertEqual(result, "03:01:26 AM [NETWORK_INFO] > test")
     }
 
     func testColorLoggerShouldChangeNetworkInfoItemPrefix() {
@@ -115,12 +139,15 @@ class ColorLoggerTests: XCTestCase {
             configuration: configuration,
             logClosure: {
                 result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
             }
         )
         // WHEN
         sut.log(with: .info, "test")
         // THEN
-        XCTAssertEqual(result, "Info > test")
+        XCTAssertEqual(result, "03:01:25 AM Info > test")
     }
 
     func testColorLoggerShouldChangeNetworkVerboseItemPrefix() {
@@ -133,12 +160,15 @@ class ColorLoggerTests: XCTestCase {
             configuration: configuration,
             logClosure: {
                 result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
             }
         )
         // WHEN
         sut.log(with: .verbose, "test")
         // THEN
-        XCTAssertEqual(result, "Verbose > test")
+        XCTAssertEqual(result, "03:01:25 AM Verbose > test")
     }
 
     func testColorLoggerShouldChangeNetworkErrorItemPrefix() {
@@ -151,11 +181,39 @@ class ColorLoggerTests: XCTestCase {
             configuration: configuration,
             logClosure: {
                 result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
             }
         )
         // WHEN
         sut.log(with: .warning, "test")
         // THEN
-        XCTAssertEqual(result, "Error > test")
+        XCTAssertEqual(result, "03:01:25 AM Error > test")
+    }
+
+    func testCustomDateFormatter() {
+        // GIVEN
+        var result: String!
+        var configuration = LoggerConfiguration.standard()
+        configuration.dateFormatter = {
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "en")
+            dateFormatter.dateFormat = "hh:MM"
+            return dateFormatter
+        }()
+        sut = ColorLogger(
+            configuration: configuration,
+            logClosure: {
+                result = $0
+            },
+            dateGenerator: {
+                Date(timeIntervalSince1970: 85)
+            }
+        )
+        // WHEN
+        sut.log(with: .info, "test")
+        // THEN
+        XCTAssertEqual(result, "\(kEscapeSequence)0;32m03:01 [NETWORK_INFO] > test\(kResetSequence)")
     }
 }
