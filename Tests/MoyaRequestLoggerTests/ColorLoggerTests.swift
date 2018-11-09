@@ -203,6 +203,7 @@ class ColorLoggerTests: XCTestCase {
             let dateFormatter = DateFormatter()
             dateFormatter.locale = Locale(identifier: "en")
             dateFormatter.dateFormat = "hh:mm"
+            dateFormatter.timeZone = TimeZone(secondsFromGMT: 3 * 60 * 60)
             return dateFormatter
         }()
         sut = ColorLogger(
