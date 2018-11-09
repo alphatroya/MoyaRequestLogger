@@ -22,6 +22,7 @@ class ColorLoggerTests: XCTestCase {
         // GIVEN
         var result: String!
         sut = ColorLogger(
+            configuration: LoggerConfiguration.fixedTimeZoneFormatter,
             logClosure: {
                 result = $0
             },
@@ -39,6 +40,7 @@ class ColorLoggerTests: XCTestCase {
         // GIVEN
         var result: String!
         sut = ColorLogger(
+            configuration: LoggerConfiguration.fixedTimeZoneFormatter,
             logClosure: {
                 result = $0
             },
@@ -56,6 +58,7 @@ class ColorLoggerTests: XCTestCase {
         // GIVEN
         var result: String!
         sut = ColorLogger(
+            configuration: LoggerConfiguration.fixedTimeZoneFormatter,
             logClosure: {
                 result = $0
             },
@@ -72,7 +75,7 @@ class ColorLoggerTests: XCTestCase {
     func testColorLoggerShouldPrintCorrectWarningMessageWithoutColors() {
         // GIVEN
         var result: String!
-        var configuration = LoggerConfiguration.standard()
+        var configuration = LoggerConfiguration.fixedTimeZoneFormatter
         configuration.isColor = false
         sut = ColorLogger(
             configuration: configuration,
@@ -92,7 +95,7 @@ class ColorLoggerTests: XCTestCase {
     func testColorLoggerShouldPrintCorrectVerboseMessageWithoutColors() {
         // GIVEN
         var result: String!
-        var configuration = LoggerConfiguration.standard()
+        var configuration = LoggerConfiguration.fixedTimeZoneFormatter
         configuration.isColor = false
         sut = ColorLogger(
             configuration: configuration,
@@ -112,7 +115,7 @@ class ColorLoggerTests: XCTestCase {
     func testColorLoggerShouldPrintCorrectInfoMessageWithoutColors() {
         // GIVEN
         var result: String!
-        var configuration = LoggerConfiguration.standard()
+        var configuration = LoggerConfiguration.fixedTimeZoneFormatter
         configuration.isColor = false
         sut = ColorLogger(
             configuration: configuration,
@@ -132,7 +135,7 @@ class ColorLoggerTests: XCTestCase {
     func testColorLoggerShouldChangeNetworkInfoItemPrefix() {
         // GIVEN
         var result: String!
-        var configuration = LoggerConfiguration.standard()
+        var configuration = LoggerConfiguration.fixedTimeZoneFormatter
         configuration.isColor = false
         configuration.infoMessage = "Info"
         sut = ColorLogger(
@@ -153,7 +156,7 @@ class ColorLoggerTests: XCTestCase {
     func testColorLoggerShouldChangeNetworkVerboseItemPrefix() {
         // GIVEN
         var result: String!
-        var configuration = LoggerConfiguration.standard()
+        var configuration = LoggerConfiguration.fixedTimeZoneFormatter
         configuration.isColor = false
         configuration.verboseMessage = "Verbose"
         sut = ColorLogger(
@@ -174,7 +177,7 @@ class ColorLoggerTests: XCTestCase {
     func testColorLoggerShouldChangeNetworkErrorItemPrefix() {
         // GIVEN
         var result: String!
-        var configuration = LoggerConfiguration.standard()
+        var configuration = LoggerConfiguration.fixedTimeZoneFormatter
         configuration.isColor = false
         configuration.warningMessage = "Error"
         sut = ColorLogger(
@@ -195,7 +198,7 @@ class ColorLoggerTests: XCTestCase {
     func testCustomDateFormatter() {
         // GIVEN
         var result: String!
-        var configuration = LoggerConfiguration.standard()
+        var configuration = LoggerConfiguration.fixedTimeZoneFormatter
         configuration.dateFormatter = {
             let dateFormatter = DateFormatter()
             dateFormatter.locale = Locale(identifier: "en")
@@ -215,5 +218,15 @@ class ColorLoggerTests: XCTestCase {
         sut.log(with: .info, "test")
         // THEN
         XCTAssertEqual(result, "\(kEscapeSequence)0;32m03:01 [NETWORK_INFO] > test\(kResetSequence)")
+    }
+}
+
+private extension LoggerConfiguration {
+    static var fixedTimeZoneFormatter: LoggerConfiguration {
+        var configuration = LoggerConfiguration.standard
+        let dateFormatter = configuration.dateFormatter
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 3 * 60 * 60)
+        configuration.dateFormatter = dateFormatter
+        return configuration
     }
 }

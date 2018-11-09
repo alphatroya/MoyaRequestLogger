@@ -8,7 +8,7 @@ import Foundation
 private let kEscapeSequence = "\u{001b}["
 
 public struct LoggerConfiguration {
-    public static func standard() -> LoggerConfiguration {
+    public static var standard: LoggerConfiguration {
         return LoggerConfiguration()
     }
 

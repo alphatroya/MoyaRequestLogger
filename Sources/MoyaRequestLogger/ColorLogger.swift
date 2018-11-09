@@ -14,7 +14,7 @@ public class ColorLogger {
     let configuration: LoggerConfiguration
 
     public init(
-        configuration: LoggerConfiguration = .standard(),
+        configuration: LoggerConfiguration = .standard,
         logClosure: @escaping ColorLoggerResultClosure = { print($0) },
         dateGenerator: @escaping ColorLoggerDateGenerator = { Date() }
     ) {
