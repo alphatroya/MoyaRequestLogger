@@ -23,7 +23,7 @@ public struct LoggerConfiguration {
     public var verboseMessage = "[NETWORK_VERBOSE]"
     public var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh:MM:ss a"
+        dateFormatter.dateFormat = "hh:mm:ss a"
         dateFormatter.locale = Locale(identifier: "en")
         return dateFormatter
     }()

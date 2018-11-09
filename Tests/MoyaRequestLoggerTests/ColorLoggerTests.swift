@@ -199,7 +199,7 @@ class ColorLoggerTests: XCTestCase {
         configuration.dateFormatter = {
             let dateFormatter = DateFormatter()
             dateFormatter.locale = Locale(identifier: "en")
-            dateFormatter.dateFormat = "hh:MM"
+            dateFormatter.dateFormat = "hh:mm"
             return dateFormatter
         }()
         sut = ColorLogger(
