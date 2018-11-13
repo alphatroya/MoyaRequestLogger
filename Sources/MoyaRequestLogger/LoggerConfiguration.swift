@@ -7,7 +7,9 @@ import Foundation
 
 private let kEscapeSequence = "\u{001b}["
 
+/// Configuration struct for the logger instance
 public struct LoggerConfiguration {
+    /// Default configuration
     public static var standard: LoggerConfiguration {
         return LoggerConfiguration()
     }
@@ -16,7 +18,10 @@ public struct LoggerConfiguration {
 
     init() {}
 
+    /// Enable ANSI color formatting of items, default: true
     public var isColor = true
+
+    /// Character using for separate status message and message content, default: ">"
     public var statusMessageSeparator = ">"
     public var infoMessage = "[NETWORK_INFO]"
     public var warningMessage = "[NETWORK_WARNING]"

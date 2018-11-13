@@ -1,0 +1,110 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/ColorLogger.swift",
+      "line": 8,
+      "symbol": "ColorLoggerResultClosure",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/ColorLogger.swift",
+      "line": 9,
+      "symbol": "ColorLoggerDateGenerator",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/ColorLogger.swift",
+      "line": 17,
+      "symbol": "ColorLogger.init(configuration:logClosure:dateGenerator:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/LoggerConfiguration.swift",
+      "line": 24,
+      "symbol": "LoggerConfiguration.statusMessageSeparator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/LoggerConfiguration.swift",
+      "line": 25,
+      "symbol": "LoggerConfiguration.infoMessage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/LoggerConfiguration.swift",
+      "line": 26,
+      "symbol": "LoggerConfiguration.warningMessage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/LoggerConfiguration.swift",
+      "line": 27,
+      "symbol": "LoggerConfiguration.verboseMessage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/LoggerConfiguration.swift",
+      "line": 28,
+      "symbol": "LoggerConfiguration.dateFormatter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/RequestDescriptor.swift",
+      "line": 9,
+      "symbol": "RequestDescriptor",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/RequestDescriptor.swift",
+      "line": 10,
+      "symbol": "RequestDescriptor.description(request:target:logger:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/RequestDescriptor.swift",
+      "line": 13,
+      "symbol": "HTTPieRequestDescriptor",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/RequestDescriptor.swift",
+      "line": 14,
+      "symbol": "HTTPieRequestDescriptor.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/RequestDescriptor.swift",
+      "line": 16,
+      "symbol": "HTTPieRequestDescriptor.description(request:target:logger:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/ResponseLoggerPlugin.swift",
+      "line": 10,
+      "symbol": "ResponseLoggerPlugin",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/ResponseLoggerPlugin.swift",
+      "line": 14,
+      "symbol": "ResponseLoggerPlugin.init(logger:descriptors:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/alphatroya/Projects/MoyaRequestLogger"
+}

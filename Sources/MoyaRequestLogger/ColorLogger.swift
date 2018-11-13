@@ -8,6 +8,7 @@ import Foundation
 public typealias ColorLoggerResultClosure = (String) -> Void
 public typealias ColorLoggerDateGenerator = () -> Date
 
+/// Class for printing log line items in log output
 public class ColorLogger {
     let logClosure: ColorLoggerResultClosure
     let dateGenerator: ColorLoggerDateGenerator
