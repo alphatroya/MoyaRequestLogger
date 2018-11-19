@@ -50,41 +50,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/RequestDescriptor.swift",
-      "line": 9,
-      "symbol": "RequestDescriptor",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/RequestDescriptor.swift",
-      "line": 10,
-      "symbol": "RequestDescriptor.description(request:target:logger:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/RequestDescriptor.swift",
-      "line": 13,
-      "symbol": "HTTPieRequestDescriptor",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/RequestDescriptor.swift",
-      "line": 14,
-      "symbol": "HTTPieRequestDescriptor.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/RequestDescriptor.swift",
-      "line": 16,
-      "symbol": "HTTPieRequestDescriptor.description(request:target:logger:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/ResponseLoggerPlugin.swift",
       "line": 10,
       "symbol": "ResponseLoggerPlugin",
