@@ -19,8 +19,8 @@ public enum LoggerLevel {
 public protocol Logger {
     /**
      Print message item with different log level
-     - Parameter level: log level for the item
-     - Parameter message: message content
+     - Parameter level: Log level for the item
+     - Parameter message: Message content
      */
     func log(with level: LoggerLevel, _ message: String)
 }

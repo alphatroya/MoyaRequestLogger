@@ -1,27 +1,6 @@
 {
   "warnings": [
     {
-      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/ColorLogger.swift",
-      "line": 8,
-      "symbol": "ColorLoggerResultClosure",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/ColorLogger.swift",
-      "line": 9,
-      "symbol": "ColorLoggerDateGenerator",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/ColorLogger.swift",
-      "line": 17,
-      "symbol": "ColorLogger.init(configuration:logClosure:dateGenerator:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/LoggerConfiguration.swift",
       "line": 26,
       "symbol": "LoggerConfiguration.infoMessage",
@@ -47,20 +26,6 @@
       "line": 29,
       "symbol": "LoggerConfiguration.dateFormatter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/RequestDescriptor.swift",
-      "line": 21,
-      "symbol": "HTTPieRequestDescriptor",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alphatroya/Projects/MoyaRequestLogger/Sources/MoyaRequestLogger/RequestDescriptor.swift",
-      "line": 22,
-      "symbol": "HTTPieRequestDescriptor.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
