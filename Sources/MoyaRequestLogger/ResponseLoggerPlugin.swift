@@ -7,10 +7,19 @@ import Foundation
 import Moya
 import enum Result.Result
 
+/**
+ A Moya plugin for printing request info and string representation of the outgoing requests and received responses
+ */
 public final class ResponseLoggerPlugin: PluginType {
     private let logger: Logger
     private let descriptors: [RequestDescriptor]
 
+    /**
+     Plugin constructor
+     - parameter logger: Logger object that print log items
+     - parameter descriptors: List of request descriptors that can produce different
+     representation of the requests
+     */
     public init(
         logger: Logger,
         descriptors: RequestDescriptor...
@@ -19,6 +28,11 @@ public final class ResponseLoggerPlugin: PluginType {
         self.descriptors = descriptors
     }
 
+    /**
+     PluginType protocol implementation for printing outgoing request
+     - parameter request: Request object
+     - parameter target: Current MoyaTarget object
+     */
     public func willSend(_ request: RequestType, target: TargetType) {
         self.logger.log(with: .info, "start new request: \(target.path)")
         for exporter in descriptors {
@@ -26,6 +40,11 @@ public final class ResponseLoggerPlugin: PluginType {
         }
     }
 
+    /**
+     PluginType protocol implementation for printing incoming response
+     - parameter result: Result object
+     - parameter target: Current MoyaTarget object
+     */
     public func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
         self.logger.log(with: .info, "completed request: \(target.path)")
         switch result {

@@ -6,13 +6,33 @@
 import Foundation
 import Moya
 
+/// Defines interface for generation string description of the request
 public protocol RequestDescriptor {
+    /**
+     Method for generating string description of the request
+     - Parameter request: Request object
+     - Parameter target: Current Moya target
+     - Parameter logger: Logger object for printing intermediate log messages
+     - Returns: String description of the request and target
+     */
     func description(request: RequestType, target: TargetType, logger: Logger) -> String
 }
 
+/**
+ Descriptor for convert request and target instances for [HTTPie](https://github.com/jakubroztocil/httpie)
+ tool string representation
+ */
 public final class HTTPieRequestDescriptor: RequestDescriptor {
+    /// Descriptor constructor
     public init() {}
 
+    /**
+     Method for generating string description of the request
+     - Parameter request: Request object
+     - Parameter target: Current Moya target
+     - Parameter logger: Logger object for printing intermediate log messages
+     - Returns: String description of the request and target
+     */
     public func description(request: RequestType, target: TargetType, logger: Logger) -> String {
         return target.httpie(request: request, logger: logger)
     }

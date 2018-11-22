@@ -5,14 +5,25 @@
 
 import Foundation
 
+/// Closure for printing log string items
 public typealias ColorLoggerResultClosure = (String) -> Void
+
+/// Generator of the current date objects
 public typealias ColorLoggerDateGenerator = () -> Date
 
+/// Class for printing log line items in log output
 public class ColorLogger {
     let logClosure: ColorLoggerResultClosure
     let dateGenerator: ColorLoggerDateGenerator
     let configuration: LoggerConfiguration
 
+    /**
+     Logger object constructor
+     - parameter configuration: Contains all configuration options for the logger
+     - parameter logClosure: Print string message closure, default use
+     plain `print()` method
+     - parameter dateGenerator: Current data object generator, default return `Date()` object
+     */
     public init(
         configuration: LoggerConfiguration = .standard,
         logClosure: @escaping ColorLoggerResultClosure = { print($0) },
@@ -25,6 +36,11 @@ public class ColorLogger {
 }
 
 extension ColorLogger: Logger {
+    /**
+     Print message item with different log level
+     - Parameter level: Log level for the item
+     - Parameter message: Message content
+     */
     public func log(with level: LoggerLevel, _ message: String) {
         var parts: [String] = [configuration.dateFormatter.string(from: self.dateGenerator())]
         switch level {

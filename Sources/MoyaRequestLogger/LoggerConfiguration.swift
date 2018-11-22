@@ -7,7 +7,9 @@ import Foundation
 
 private let kEscapeSequence = "\u{001b}["
 
+/// Configuration struct for the logger instance
 public struct LoggerConfiguration {
+    /// Default configuration
     public static var standard: LoggerConfiguration {
         return LoggerConfiguration()
     }
@@ -16,11 +18,19 @@ public struct LoggerConfiguration {
 
     init() {}
 
+    /// Enable ANSI color formatting of items, default: true
     public var isColor = true
+
+    /// Character using for separate status message and message content, default: ">"
     public var statusMessageSeparator = ">"
+    /// Info messages prefix
     public var infoMessage = "[NETWORK_INFO]"
+    /// Warning messages prefix
     public var warningMessage = "[NETWORK_WARNING]"
+    /// Verbose message prefix
     public var verboseMessage = "[NETWORK_VERBOSE]"
+
+    /// Date formatter for printing current date prefix
     public var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "hh:mm:ss a"
