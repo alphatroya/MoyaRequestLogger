@@ -14,7 +14,7 @@
     <a title="ResponseLoggerPlugin Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (79% documented)</p>
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -91,7 +91,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>A Moya plugin for printing request info and string representation of the outgoing requests and received responses</p>
 
           </section>
           <section class="section task-group-section">
@@ -110,7 +110,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Plugin constructor</p>
 
                       </div>
                       <div class="declaration">
@@ -124,15 +124,47 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>logger</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Logger object that print log items</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>descriptors</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>List of request descriptors that can produce different
+representation of the requests</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya10PluginTypeP8willSend_6targetyAA07RequestC0_p_AA06TargetC0_ptF"></a>
+                    <a name="/s:17MoyaRequestLogger08ResponseC6PluginC8willSend_6targety0A00B4Type_p_AF06TargetI0_ptF"></a>
                     <a name="//apple_ref/swift/Method/willSend(_:target:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya10PluginTypeP8willSend_6targetyAA07RequestC0_p_AA06TargetC0_ptF">willSend(_:target:)</a>
+                    <a class="token" href="#/s:17MoyaRequestLogger08ResponseC6PluginC8willSend_6targety0A00B4Type_p_AF06TargetI0_ptF">willSend(_:target:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -140,7 +172,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>PluginType protocol implementation for printing outgoing request</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -150,15 +183,46 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Request object</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>target</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Current MoyaTarget object</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya10PluginTypeP10didReceive_6targety6ResultAFOyAA8ResponseCAA0A5ErrorOG_AA06TargetC0_ptF"></a>
+                    <a name="/s:17MoyaRequestLogger08ResponseC6PluginC10didReceive_6targety6ResultAFOy0A00D0CAH0A5ErrorOG_AH10TargetType_ptF"></a>
                     <a name="//apple_ref/swift/Method/didReceive(_:target:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya10PluginTypeP10didReceive_6targety6ResultAFOyAA8ResponseCAA0A5ErrorOG_AA06TargetC0_ptF">didReceive(_:target:)</a>
+                    <a class="token" href="#/s:17MoyaRequestLogger08ResponseC6PluginC10didReceive_6targety6ResultAFOy0A00D0CAH0A5ErrorOG_AH10TargetType_ptF">didReceive(_:target:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -166,7 +230,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>PluginType protocol implementation for printing incoming response</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -176,6 +241,37 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Result object</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>target</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Current MoyaTarget object</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -184,7 +280,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-11-20)</p>
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-11-22)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
