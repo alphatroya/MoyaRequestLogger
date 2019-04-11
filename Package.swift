@@ -13,7 +13,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/Moya/Moya.git", .upToNextMajor(from: "12.0.0")),
+        .package(url: "https://github.com/Moya/Moya.git", .upToNextMajor(from: "13.0.0")),
     ],
     targets: [
         .target(
