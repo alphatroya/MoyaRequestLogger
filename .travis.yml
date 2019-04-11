@@ -11,7 +11,7 @@ script:
   - bash <(curl -s https://codecov.io/bash)
 before_deploy:
   - carthage checkout
-  - carthage build --no-skip-current --no-use-binaries
+  - carthage build --no-skip-current --no-use-binaries --cache-builds
   - carthage archive MoyaRequestLogger
 deploy:
   provider: releases
